@@ -1,0 +1,130 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #ffffff;
+}
+
+
+main {
+    margin-bottom: 120px; 
+}
+
+.productos-title {
+    width: 100%;
+    text-align: center;
+    font-size: 46px;
+    font-weight: 900;
+    margin-top: 40px;
+    color: #000000;
+}
+
+.grid-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 40px;
+    gap: 60px 80px;
+}
+
+/* ANIMACIÓN DE CRECIMIENTO */
+.item-box-1,
+.item-box-2,
+.item-box-3,
+.item-box-4,
+.item-box-5,
+.item-box-6,
+.item-box-7,
+.item-box-8,
+.item-box-9 {
+    width: 260px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.28s ease-in-out;
+}
+
+.item-box-1:hover,
+.item-box-2:hover,
+.item-box-3:hover,
+.item-box-4:hover,
+.item-box-5:hover,
+.item-box-6:hover,
+.item-box-7:hover,
+.item-box-8:hover,
+.item-box-9:hover {
+    transform: scale(1.15);
+}
+
+.item-img-1,
+.item-img-2,
+.item-img-3,
+.item-img-4,
+.item-img-5,
+.item-img-6,
+.item-img-7,
+.item-img-8,
+.item-img-9 {
+    width: 260px;
+    height: 220px;
+    background-size: cover;
+    background-position: center;
+    border: none;
+    border-radius: 0;
+}
+
+/* IMÁGENES */
+.item-img-1 { background-image: url("https://picsum.photos/seed/h1/260/220"); }
+.item-img-2 { background-image: url("https://picsum.photos/seed/h2/260/220"); }
+.item-img-3 { background-image: url("https://picsum.photos/seed/h3/260/220"); }
+.item-img-4 { background-image: url("https://picsum.photos/seed/h4/260/220"); }
+.item-img-5 { background-image: url("https://picsum.photos/seed/h5/260/220"); }
+.item-img-6 { background-image: url("https://picsum.photos/seed/h6/260/220"); }
+.item-img-7 { background-image: url("https://picsum.photos/seed/h7/260/220"); }
+.item-img-8 { background-image: url("https://picsum.photos/seed/h8/260/220"); }
+.item-img-9 { background-image: url("https://picsum.photos/seed/h9/260/220"); }
+
+.item-text-1,
+.item-text-2,
+.item-text-3,
+.item-text-4,
+.item-text-5,
+.item-text-6,
+.item-text-7,
+.item-text-8,
+.item-text-9 {
+    width: 100%;
+    text-align: center;
+    font-size: 17px;
+    font-weight: 800;
+    color: #000000;
+    margin-top: 14px;
+}
+
+#closeModal {
+    position: absolute;
+    top: -10px;     
+    right: -10px;   
+    background: white;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0px 2px 6px rgba(0,0,0,0.2);
+}
+
+
+#productModal .modal-content {
+    animation: fadeIn 0.75s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+

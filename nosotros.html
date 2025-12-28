@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Nosotros - Sólumaq</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/nosotros.css"> 
+
+</head>
+<body>
+<main>
+
+  <div id="header"></div>
+
+  <!-- Sección principal -->
+  <section class="about-section">
+    <h2>¿Quiénes Somos?</h2>
+
+    <p>
+      SOLUMAQ surge con la visión de reunir en un solo lugar soluciones en
+      maquinaria, repuestos y herramientas de las marcas más reconocidas del
+      mundo. Hoy somos un aliado estratégico en construcción, minería e industria,
+      ofreciendo la línea más amplia de martillos hidráulicos junto con respaldo,
+      garantía y confianza que aseguran la continuidad de tus proyectos.
+    </p>
+
+    <p>
+      Trabajamos para que cada cliente encuentre en nosotros un socio confiable,
+      capaz de ofrecer disponibilidad inmediata, soporte especializado y soluciones
+      que impulsan la productividad en cada obra. Porque en SOLUMAQ, la calidad
+      no es opcional, es parte integral de nuestro servicio.
+    </p>
+  </section>
+
+  <section class="mission-vision-section">
+    <div class="mission">
+      <h3>Misión</h3>
+      <p>
+        Ofrecer herramientas, repuestos e implementos para
+        maquinarias pesadas que garanticen confianza, disponibilidad
+        y precios justos, apoyando a empresas que dependen de
+        equipos industriales, agrícolas, de construcción y minería, con
+        un catálogo variado y marcas reconocidas a nivel internacional.
+      </p>
+    </div>
+
+    <div class="vision">
+      <h3>Visión</h3>
+      <p>
+        Expandirnos como un referente en soluciones para maquinaria
+        pesada en la región, ampliando nuestra presencia en sectores
+        como el agrícola, la construcción y la minería, y
+        consolidándonos como la opción más confiable por nuestra
+        variedad, eficiencia y compromiso con el cliente.
+      </p>
+    </div>
+
+    <div class="valores">
+      <h3>Valores</h3>
+      <p>
+        En <span>SOLUMAQ</span> trabajamos guiados por valores que definen nuestra forma de servir. La confianza nos impulsa a ser un proveedor
+        transparente, responsable y accesible. Nuestro compromiso se refleja en el acompañamiento constante de cada operación, con seriedad y
+        visión a largo plazo. Y bajo la responsabilidad, asumimos cada pedido, consulta o acuerdo con la firme intención de brindar respuestas
+        claras, cumplir los plazos y ofrecer soluciones reales cuando más se necesitan.
+      </p>
+    </div>
+  </section>
+
+
+    <div id="footer"></div>
+ 
+  </main>
+
+  <!-- CARGA DE HEADER Y FOOTER -->
+  <script>
+  async function loadComponent(id, file) {
+    const container = document.getElementById(id);
+    const response = await fetch(file);
+    const html = await response.text();
+
+  const temp = document.createElement("div");
+  temp.innerHTML = html;
+ 
+  container.innerHTML = html;
+
+  temp.querySelectorAll("script").forEach(oldScript => {
+    const newScript = document.createElement("script");
+
+    if (oldScript.src) {
+      newScript.src = oldScript.src;
+    } else {
+      newScript.textContent = oldScript.textContent;
+    }
+
+    document.body.appendChild(newScript);
+  });
+}
+
+loadComponent("header", "header.html");
+loadComponent("footer", "footer.html");
+</script>
+
+</body>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+   <head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos - Solumaq</title>
+
+    <!-- Cargar Tailwind globalmente -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/productos.css">
+
+
+  </head>
+  <body>
+    
+    <!-- Header -->
+    <div id="header"></div>
+ 
+ <!-- Contenido -->
+ <main class="">
+ 
+ <div class="productos-title">PRODUCTOS</div>
+ 
+ <div class="grid-container">
+ 
+ <div class="item-box-1 product-item"
+    data-title="Martillos Hidráulicos"
+    data-desc="Herramientas de alto rendimiento ideales para demolición, excavación y trabajos pesados."
+    data-img="https://picsum.photos/seed/h1/600/400">
+    
+    <div class="item-img-1"></div>
+    <div class="item-text-1">MARTILLOS HIDRÁULICOS</div>
+ </div>
+
+  <div class="item-box-2 product-item"
+    data-title="CUCHARONES DE EXCAVACIÓN"
+    data-desc="Texto de Ejemplo, un ejemplo de ejemplo hasta que se pueda dar texto. un saludo"
+    data-img="https://picsum.photos/seed/h2/600/400">
+    
+    <div class="item-img-2"></div>
+    <div class="item-text-2">CUCHARONES DE EXCAVACIÓN</div>
+ </div>
+ 
+
+  <div class="item-box-3 product-item"
+    data-title="CINCEL PARA MARTILLOS"
+    data-desc="Texto de Ejemplo, un ejemplo de ejemplo hasta que se pueda dar texto. un saludo"
+    data-img="https://picsum.photos/seed/h3/600/400">
+    
+    <div class="item-img-3"></div>
+    <div class="item-text-3">CINCEL PARA MARTILLOS</div>
+ </div>
+
+  <div class="item-box-4 product-item"
+    data-title="Repuestos y Filtros"
+    data-desc="Texto de Ejemplo, un ejemplo de ejemplo hasta que se pueda dar texto. un saludo"
+    data-img="https://picsum.photos/seed/h4/600/400">
+    
+    <div class="item-img-4"></div>
+    <div class="item-text-4">Repuestos y Filtros</div>
+  </div>
+ 
+  <div class="item-box-5 product-item"
+    data-title="Montacargas"
+    data-desc="Texto de Ejemplo, un ejemplo de ejemplo hasta que se pueda dar texto. un saludo"
+    data-img="https://picsum.photos/seed/h5/600/400">
+    
+    <div class="item-img-5"></div>
+    <div class="item-text-5">Montacargas</div>
+  </div>
+ 
+  <div class="item-box-6 product-item"
+    data-title="Generadores Eléctricos"
+    data-desc="Texto de Ejemplo, un ejemplo de ejemplo hasta que se pueda dar texto. un saludo"
+    data-img="https://picsum.photos/seed/h6/600/400">
+  
+    <div class="item-img-6"></div>
+    <div class="item-text-6">Generadores Eléctricos</div>
+  </div>
+
+  <div class="item-box-7 product-item"
+    data-title="Compresores de aire"
+    data-desc="Texto de Ejemplo, un ejemplo de ejemplo hasta que se pueda dar texto. un saludo"
+    data-img="https://picsum.photos/seed/h7/600/400">
+    
+    <div class="item-img-7"></div>
+    <div class="item-text-7">Compresores de aire</div>
+ </div>
+ 
+ <div class="item-box-8 product-item"
+    data-title="Torres de iluminación"
+    data-desc="Texto de Ejemplo, un ejemplo de ejemplo hasta que se pueda dar texto. un saludo"
+    data-img="https://picsum.photos/seed/h8/600/400">
+    
+    <div class="item-img-8"></div>
+    <div class="item-text-8">Torres de iluminación</div>
+ </div>
+
+ <div class="item-box-9 product-item"
+    data-title="Minicargadores"
+    data-desc="Texto de Ejemplo, un ejemplo de ejemplo hasta que se pueda dar texto. un saludo"
+    data-img="https://picsum.photos/seed/h9/600/400">
+
+    <div class="item-img-9"></div>
+    <div class="item-text-9">Minicargadores</div>
+ </div>
+ 
+ </div>
+ 
+ <!-- Modal -->
+    <div id="productModal" class="hidden fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center p-4 z-50">
+        <div class="bg-white max-w-md w-full rounded-lg shadow-lg relative p-4">
+            
+            <!-- Botón cerrar -->
+            <button id="closeModal" class="absolute top-2 right-2 text-xl font-bold cursor-pointer">&times;</button>
+            
+            <!-- Imagen -->
+            <img id="modalImg" src="" class="w-full h-56 object-cover rounded">
+            
+            <!-- Título -->
+            <h2 id="modalTitle" class="text-2xl font-bold mt-4"></h2>
+            
+            <!-- Descripción -->
+            <p id="modalDesc" class="mt-2 text-gray-700"></p>
+        </div>
+    </div>
+</main>
+ 
+      <script src="js/productos.js"></script>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+    
+  <!-- CARGA DE HEADER Y FOOTER -->
+  <script>
+    async function loadComponent(id, file) {
+      const container = document.getElementById(id);
+      const response = await fetch(file);
+      const html = await response.text();
+
+    const temp = document.createElement("div");
+    temp.innerHTML = html;
+  
+    container.innerHTML = html;
+
+    temp.querySelectorAll("script").forEach(oldScript => {
+      const newScript = document.createElement("script");
+
+      if (oldScript.src) {
+        newScript.src = oldScript.src;
+      } else {
+        newScript.textContent = oldScript.textContent;
+      }
+
+      document.body.appendChild(newScript);
+    });
+  }
+
+  loadComponent("header", "header.html");
+  loadComponent("footer", "footer.html");
+  </script>
+  </body>
+</html>

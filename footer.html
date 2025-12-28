@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+  <body>
+     <footer class="footer">
+  <style>
+    .footer {
+      background-color: #000;
+      color: #fff;
+      padding: 50px 20px 20px;
+      font-family: "Poppins", sans-serif;
+    }
+
+    .footer-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: auto;
+      gap: 30px;
+    }
+
+    .footer-section {
+      flex: 1 1 300px;
+      min-width: 250px;
+    }
+
+    .footer-section h2 {
+      font-size: 1.8em;
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+
+    .footer-section .highlight {
+      color: #fcb900;
+    }
+
+    .footer-section h3 {
+      color: #fcb900;
+      margin-bottom: 10px;
+    }
+
+    .footer-section p,
+    .footer-section ul {
+      font-size: 0.95em;
+      line-height: 1.6;
+    }
+
+    .footer-section ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer-section ul li {
+      margin-bottom: 6px;
+    }
+
+    .footer-section ul li a {
+      color: #fff;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .footer-section ul li a:hover {
+      color: #fcb900;
+    }
+
+    .social-icons a {
+      color: #fff;
+      margin-right: 10px;
+      font-size: 1.2em;
+      transition: color 0.3s;
+    }
+
+    .social-icons a:hover {
+      color: #fcb900;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      padding-top: 20px;
+      border-top: 1px solid #333;
+      margin-top: 30px;
+      font-size: 0.9em;
+      color: #ccc;
+    }
+
+    .footer-section.contacto i {
+      color: #fcb900;
+      margin-right: 5px;
+    }
+
+    @media (max-width: 768px) {
+      .footer-container {
+        flex-direction: column;
+        text-align: center;
+      }
+      .social-icons {
+        justify-content: center;
+        display: flex;
+      }
+    }
+  </style>
+
+  <div class="footer-container">
+    <div class="footer-section">
+      <h2><span class="highlight">SÓLU</span>MAQ</h2>
+      <p>
+        Soluciones en maquinaria diseñadas para acompañar tus proyectos,
+        garantizando productividad, confianza y respaldo en cada etapa,
+        impulsando tu crecimiento con la mejor calidad del mercado.
+      </p>
+      <div class="social-icons">
+        <a href="#" target="_blank"><i class="fab fa-github">[]</i></a>
+        <a href="#" target="_blank"><i class="fab fa-dribbble">[]</i></a>
+        <a href="#" target="_blank"><i class="fab fa-twitter">[]</i></a>
+        <a href="#" target="_blank"><i class="fab fa-youtube">[]</i></a>
+      </div>
+    </div>
+
+    <!-- <div class="footer-section">
+      <h3>Enlaces Rápidos</h3>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="productos.html">Productos</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </div> -->
+
+    <div class="footer-section contacto">
+      <h3>Contacto</h3>
+      <p>
+        <strong>Avenida Independencia, Km. 10, Local 109</strong><br>
+        Santo Domingo, República Dominicana.
+      </p><br>
+      <p>(809) 706-3525</p><br>
+      <p> info@solumaqrd.com</p><br> 
+      <h4>Horario de atención:</h4>
+      <p>Lun - Vie: 8:00 a.m. – 6:00 p.m.<br>
+        Sáb: 8:00 a.m. – 2:00 p.m.</p>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>©2025 SOLUMAQ — Soluciones en maquinaria productiva</p>
+  </div>
+
+  
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+  </body>
+</html>

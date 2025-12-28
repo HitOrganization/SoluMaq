@@ -1,0 +1,157 @@
+/* RESET */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  background:#ffffff;
+}
+
+/* ---- HERO SECTION ---- */
+.hero-container{
+  width:100%;
+  background:#fdbd27;
+  padding-bottom:30px; 
+}
+
+.hero-content{
+  display:flex;
+  width:100%;
+  padding:30px 40px; 
+  align-items:center;
+  justify-content:space-between;
+}
+
+.hero-text{
+  flex:1;
+  padding-right:40px;
+}
+
+.hero-title-line1{
+  font-size:52px;
+  font-weight:900;
+  color:#000000;
+  line-height:52px;
+}
+
+.hero-title-line2{
+  font-size:52px;
+  font-weight:900;
+  color:#ffffff;
+  line-height:52px;
+}
+
+.hero-image{
+  width:420px;
+  height:auto;
+}
+
+/* ---- DESCRIPTION ---- */
+.desc-section{
+  width:100%;
+  padding:35px 40px 25px 40px; 
+}
+
+.desc-title{
+  font-size:18px;
+  font-weight:900;
+  margin-bottom:12px; 
+}
+
+.desc-text{
+  font-size:15px;
+  line-height:22px;
+  max-width:850px;
+  color:#333333;
+}
+
+/* ---- PRODUCTS ---- */
+.products-container{
+  width:100%;
+  display:flex;
+  justify-content:center;
+  gap:20px;          
+  padding:10px 0 50px 0; 
+}
+
+.product-card-wrap{
+  padding:0; 
+}
+
+/* ---- CARD ---- */
+.card{
+  width:260px;
+  background:#f5f5f5;
+  border-radius:10px;
+  padding:18px 16px 26px 16px; 
+  text-align:center;
+}
+
+.card-img{
+  width:100%;
+  height:auto;
+  border-radius:4px;
+  margin-bottom:14px; 
+  object-fit:cover;
+}
+
+.card-title{
+  font-size:22px;
+  font-weight:900;
+  margin-bottom:14px; 
+  color:#000000;
+}
+
+.card-grid{
+  width:100%;
+  display:grid;
+  grid-template-columns:1fr 1fr; 
+  gap:18px 35px;
+  margin-bottom:20px;
+  justify-content: center;
+}
+
+
+.card-grid > div{
+  width:100%;
+  max-width:120px;       
+  margin:0 auto;         
+  text-align:left;       
+}
+
+.card-label{
+  font-size:13px;
+  font-weight:900;
+  color:#000000;
+  text-align:left;
+}
+
+.card-value{
+  font-size:13px;
+  color:#000000;
+  margin-top:3px;
+  text-align:left;
+  line-height:15px;
+}
+
+/* ---- BUTTON ---- */
+.card-btn{
+  width:110px;
+  background:#fcb827;
+  color:#000000;
+  border:none;
+  padding:10px 0;
+  border-radius:20px;
+  font-size:14px;
+  font-weight:700;
+  cursor:pointer;
+  transition: background 0.25s ease; 
+}
+
+/* Hover */
+.card-btn:hover{
+  background:#e0a213; 
+}

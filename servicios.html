@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+   <head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios - Solumaq</title>
+
+    <!-- Cargar Tailwind globalmente -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+  </head>
+  <body>
+    <!-- Header -->
+    <div id="header"></div>
+
+    <!-- Contenido -->
+    <main class="">
+      <h1 class="">
+        Hola
+      </h1>
+      <p class="">
+        Este es el contenido de servicios.html.
+      </p>
+    </main>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+    
+  <!-- CARGA DE HEADER Y FOOTER -->
+  <script>
+    async function loadComponent(id, file) {
+      const container = document.getElementById(id);
+      const response = await fetch(file);
+      const html = await response.text();
+
+    const temp = document.createElement("div");
+    temp.innerHTML = html;
+  
+    container.innerHTML = html;
+
+    temp.querySelectorAll("script").forEach(oldScript => {
+      const newScript = document.createElement("script");
+
+      if (oldScript.src) {
+        newScript.src = oldScript.src;
+      } else {
+        newScript.textContent = oldScript.textContent;
+      }
+
+      document.body.appendChild(newScript);
+    });
+  }
+
+  loadComponent("header", "header.html");
+  loadComponent("footer", "footer.html");
+  </script>
+  </body>
+</html>
