@@ -1,382 +1,406 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SOLUMAQ — Soluciones en Maquinaria</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      darkMode: 'class',
-      theme: {
-        extend: {
-          colors: {
-            solumaqYellow: '#f7b500',
-            solumaqBlack: '#0b0b0b',
-            solumaqGray: '#f3f4f6',
-            darkBg: '#1a1a1a',
-            darkCard: '#2d2d2d'
-          },
-          fontFamily: {
-            sans: ['Poppins', 'Arial', 'sans-serif']
-          }
-        }
-      }
-    }
-  </script>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/index.css">
-
+  <meta name="description" content="Tu aliado estratégico en maquinaria de construcción, minería e industria en República Dominicana. Repuestos, herramientas, equipos y la línea más amplia de martillos hidráulicos." />
+  <link rel="stylesheet" href="css/index.css" />
 </head>
-<body class="antialiased font-sans text-solumaqBlack bg-white dark:bg-darkBg dark:text-white">
-  <div class="w-full top-accent"></div>
+<body>
 
-  <!-- HEADER SUPERIOR CON TELÉFONO Y CONFIGURACIONES -->
-  <div class="bg-gray-100 dark:bg-gray-800 py-2 text-sm">
-    <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
-      <!-- Espacio vacío a la izquierda para balancear -->
-      <div class="w-24"></div>
-      
-      <!-- Teléfono en el centro -->
-      <div class="flex items-center gap-2 text-gray-700 dark:text-gray-300">
-        <span>📞</span>
-        <span id="phoneText">(809) 706-3525</span>
+<!-- ══════════════════════════════════════════════
+     TOP BAR
+══════════════════════════════════════════════ -->
+<div class="top-bar">
+  <div class="container">
+
+    <!-- Teléfono -->
+    <div class="topbar-phone">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:14px;height:14px;stroke:var(--yellow)">
+        <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8 19.79 19.79 0 01.5 1.18 2 2 0 012.48 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.18 6.18l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+      </svg>
+      <span id="tb-phone">(809) 706-3525</span>
+    </div>
+
+    <!-- Controls -->
+    <div class="topbar-controls">
+
+      <!-- Dark mode -->
+      <div class="toggle-group">
+        <span id="tb-dark-label">Modo oscuro</span>
+        <label class="switch">
+          <input type="checkbox" id="darkToggle" />
+          <span class="slider"></span>
+        </label>
       </div>
-      
-      <!-- Configuraciones a la derecha -->
-      <div class="flex items-center gap-6">
-        <!-- Interruptor de modo oscuro -->
-        <div class="flex items-center gap-2">
-          <span class="text-xs text-gray-700 dark:text-gray-300" id="darkModeText">Modo oscuro</span>
-          <label class="switch">
-            <input type="checkbox" id="darkModeToggle">
-            <span class="slider"></span>
-          </label>
-        </div>
-        
-        <!-- Interruptor de idioma -->
-        <div class="flex items-center gap-2">
-          <span class="text-xs text-gray-700 dark:text-gray-300" id="languageText">Español</span>
-          <label class="switch">
-            <input type="checkbox" id="languageToggle">
-            <span class="slider"></span>
-          </label>
-          <span class="text-xs text-gray-700 dark:text-gray-300" id="languageText2">English</span>
-        </div>
+
+      <!-- Language -->
+      <div class="toggle-group">
+        <span id="tb-lang1">ES</span>
+        <label class="switch">
+          <input type="checkbox" id="langToggle" />
+          <span class="slider"></span>
+        </label>
+        <span id="tb-lang2">EN</span>
       </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════
+     HEADER
+══════════════════════════════════════════════ -->
+<header class="site-header">
+  <div class="container">
+
+    <!-- Logo -->
+    <a href="index.html" class="logo" aria-label="SOLUMAQ – Inicio">
+      <div class="logo-mark">
+        <span class="p1">SÓLU</span><span class="p2">MAQ</span>
+      </div>
+      <div class="logo-sub" id="hdr-slogan">Soluciones en Maquinaria</div>
+    </a>
+
+    <!-- Desktop nav -->
+    <nav class="main-nav" aria-label="Navegación principal">
+      <a href="index.html"     class="nav-link active" id="nav-inicio">Inicio</a>
+      <a href="nosotros.html"  class="nav-link"        id="nav-nosotros">Nosotros</a>
+      <a href="servicios.html" class="nav-link"        id="nav-servicios">Servicios</a>
+      <a href="productos.html" class="nav-link"        id="nav-productos">Productos</a>
+      <a href="contacto.html"  class="nav-cta nav-link" id="nav-contacto">Contacto</a>
+    </nav>
+
+    <!-- Hamburger -->
+    <button class="hamburger" id="hamburger" aria-label="Menú" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+  </div>
+
+  <!-- Mobile nav -->
+  <nav class="mobile-nav" id="mobileNav" aria-label="Menú móvil">
+    <a href="index.html"     class="nav-link" id="mnav-inicio">Inicio</a>
+    <a href="nosotros.html"  class="nav-link" id="mnav-nosotros">Nosotros</a>
+    <a href="servicios.html" class="nav-link" id="mnav-servicios">Servicios</a>
+    <a href="productos.html" class="nav-link" id="mnav-productos">Productos</a>
+    <a href="contacto.html"  class="nav-cta"  id="mnav-contacto">Contacto</a>
+  </nav>
+</header>
+
+
+<!-- ══════════════════════════════════════════════
+     HERO
+══════════════════════════════════════════════ -->
+<section class="hero" id="inicio">
+  <div class="hero-inner">
+    <div class="hero-img-wrap">
+      <img src="photos/header.jpg"
+           alt="Equipos SOLUMAQ – Maquinaria de construcción"
+           loading="eager" />
     </div>
   </div>
 
-  
-
-  <!-- HEADER PRINCIPAL -->
-  <header class="bg-white dark:bg-darkBg border-b border-gray-200 dark:border-gray-700 sticky top-0 z-50">
-    <div class="max-w-7xl mx-auto px-6 py-4 relative">
-      <div class="flex flex-col md:flex-row md:items-center md:justify-between">
-        <!-- Logo y nombre -->
-        <div class="flex items-center justify-between">
-          <div class="flex flex-col items-start">
-            <div class="text-3xl font-extrabold tracking-wide">
-              <span class="text-solumaqBlack dark:text-white">SÓLU</span>
-              <span class="text-solumaqYellow">MAQ</span>
-            </div>
-            <div class="text-xs text-gray-500 dark:text-gray-400 uppercase mt-1" id="subtitleText">Soluciones en Maquinaria</div>
-          </div>
-          
-          <!-- Botón hamburguesa para móviles -->
-          <div class="hamburger md:hidden" id="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-        </div>
-        
-        <!-- Navegación desktop -->
-        <nav class="desktop-nav hidden md:block">
-          <div class="flex gap-6 text-sm font-medium">
-            <a href="index.html" class="hover:text-solumaqYellow transition-colors dark:text-gray-300" id="navInicio">Inicio</a>
-            <a href="nosotros.html" class="hover:text-solumaqYellow transition-colors dark:text-gray-300" id="navNosotros">Nosotros</a>
-            <a href="servicios.html" class="hover:text-solumaqYellow transition-colors dark:text-gray-300" id="navServicios">Servicios</a>
-            <a href="productos.html" class="hover:text-solumaqYellow transition-colors dark:text-gray-300" id="navProductos">Productos +</a>
-            <a href="contacto.html" class="hover:text-solumaqYellow transition-colors dark:text-gray-300" id="navContacto">Contacto</a>
-          </div>
-        </nav>
-      </div>
-      
-      <!-- Menú móvil -->
-      <div class="mobile-menu" id="mobileMenu">
-        <a href="index.html" class="hover:text-solumaqYellow transition-colors" id="mobileNavInicio">Inicio</a>
-        <a href="nosotros.html" class="hover:text-solumaqYellow transition-colors" id="mobileNavNosotros">Nosotros</a>
-        <a href="servicios.html" class="hover:text-solumaqYellow transition-colors" id="mobileNavServicios">Servicios</a>
-        <a href="productos.html" class="hover:text-solumaqYellow transition-colors" id="mobileNavProductos">Productos +</a>
-        <a href="contacto.html" class="hover:text-solumaqYellow transition-colors" id="mobileNavContacto">Contacto</a>
-      </div>
-    </div>
-  </header>
-
-  <!-- HERO -->
-  <section id="inicio" class="bg-[var(--yellow)] dark:bg-yellow-900">
-    <div class="max-w-7xl mx-auto px-6 py-10">
-      <div class="w-full rounded-sm overflow-hidden shadow-md" style="height:360px;">
-        <img src="photos/header.jpg" 
-             alt="Equipos SOLUMAQ - Maquinaria de construcción y minería" 
-             class="w-full h-full object-cover">
-      </div>
-    </div>
-    <div class="bg-white dark:bg-darkBg py-10">
-      <div class="max-w-5xl mx-auto px-6 text-center">
-        <h1 class="text-2xl md:text-3xl font-extrabold tracking-wide text-solumaqBlack dark:text-white mb-6" id="mainTitle">SOLUMAQ = <span class="text-solumaqYellow">soluciones que impulsan tu productividad</span></h1>
-        <div class="text-gray-700 dark:text-gray-300 text-base leading-relaxed max-w-3xl mx-auto">
-          <p id="description1">Somos tu aliado estratégico en el sector construcción, minería e industria en la República Dominicana. En SOLUMAQ reunimos en un solo lugar <strong>repuestos, herramientas y equipos</strong> originales de las marcas más reconocidas del mercado. Contamos con la línea más amplia de martillos hidráulicos, garantizando soluciones adaptadas a cada desafío de tus proyectos.</p>
-          <p class="mt-4" id="description2">Nuestro compromiso es brindar <strong>calidad, respaldo y garantías</strong> reales en cada producto, junto con un servicio confiable que asegura la continuidad de tus operaciones. Más que proveedores, somos un aliado estratégico que impulsa tu productividad con soluciones en maquinaria diseñadas para maximizar resultados.</p>
-          
-          <!-- Línea divisoria más grande que va de esquina a esquina -->
-          <div class="hero-divider my-8 w-full"></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SERVICIOS -->
-  <section id="servicios" class="relative py-16 overflow-hidden">
-    <div class="services-bg absolute inset-0 z-0"></div>
-
-    <div class="relative z-10 max-w-7xl mx-auto grid md:grid-cols-3 gap-8 px-6">
-      <div>
-        <form class="bg-[var(--yellow)] dark:bg-yellow-800 p-6 rounded-sm shadow-md space-y-3">
-          <h3 class="font-bold text-lg mb-2 dark:text-white" id="formTitle">Solicita más información</h3>
-          <input type="text" placeholder="Nombre *" class="w-full rounded-sm px-3 py-2 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-solumaqYellow dark:bg-gray-700 dark:border-gray-600 dark:text-white" id="nameInput" required>
-          <input type="tel" placeholder="Teléfono *" class="w-full rounded-sm px-3 py-2 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-solumaqYellow dark:bg-gray-700 dark:border-gray-600 dark:text-white" id="phoneInput" required>
-          <input type="email" placeholder="Email *" class="w-full rounded-sm px-3 py-2 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-solumaqYellow dark:bg-gray-700 dark:border-gray-600 dark:text-white" id="emailInput" required>
-          <input type="text" placeholder="Empresa *" class="w-full rounded-sm px-3 py-2 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-solumaqYellow dark:bg-gray-700 dark:border-gray-600 dark:text-white" id="companyInput" required>
-          <textarea placeholder="Mensaje *" class="w-full rounded-sm px-3 py-2 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-solumaqYellow dark:bg-gray-700 dark:border-gray-600 dark:text-white" rows="4" id="messageInput" required></textarea>
-          <label class="text-sm font-semibold dark:text-white" id="formLabel">Seleccione una opción</label>
-          <select class="w-full rounded-sm px-3 py-2 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-solumaqYellow dark:bg-gray-700 dark:border-gray-600 dark:text-white" id="formSelect">
-            <option id="option1">Venta de equipos</option>
-            <option id="option2">Renta de equipos</option>
-            <option id="option3">Repuestos</option>
-          </select>
-          <button class="bg-black dark:bg-gray-800 text-white px-4 py-2 w-full rounded-sm hover:bg-gray-800 dark:hover:bg-gray-700 transition-colors" id="formButton">Enviar</button>
-        </form>
-      </div>
-
-      <div class="md:col-span-2">
-        <h2 class="text-3xl font-extrabold mb-2 title-lux-line dark:text-white" id="servicesTitle">Nuestros Servicios</h2>
-        <div class="section-line mb-6"></div>
-        <div class="grid sm:grid-cols-2 gap-6">
-          <div class="bg-white dark:bg-darkCard shadow-md rounded-sm overflow-hidden service-card">
-            <div class="service-img">
-              <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1073&q=80" alt="Venta de equipos de construcción">
-            </div>
-            <div class="p-4 text-center font-semibold dark:text-white" id="service1Text">Ventas</div>
-          </div>
-          <div class="bg-white dark:bg-darkCard shadow-md rounded-sm overflow-hidden service-card">
-            <div class="service-img">
-              <img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Renta de equipos pesados">
-            </div>
-            <div class="p-4 text-center font-semibold dark:text-white" id="service2Text">Renta de equipos</div>
-          </div>
-          <div class="bg-white dark:bg-darkCard shadow-md rounded-sm overflow-hidden service-card">
-            <div class="service-img">
-              <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Asistencia técnica especializada">
-            </div>
-            <div class="p-4 text-center font-semibold dark:text-white" id="service3Text">Asistencia Técnica</div>
-          </div>
-          <div class="bg-white dark:bg-darkCard shadow-md rounded-sm overflow-hidden service-card">
-            <div class="service-img">
-              <img src="https://picsum.photos/seed/h15/260/220" alt="Repuestos y accesorios">
-            </div>
-            <div class="p-4 text-center font-semibold dark:text-white" id="service4Text">Tienda de Repuestos</div>
-          </div>
-          <div class="bg-white dark:bg-darkCard shadow-md rounded-sm overflow-hidden service-card">
-            <div class="service-img">
-              <img src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Respaldo y garantía SOLUMAQ">
-            </div>
-            <div class="p-4 text-center font-semibold dark:text-white" id="service5Text">Respaldo Solumaq</div>
-          </div>
-          <div class="bg-white dark:bg-darkCard shadow-md rounded-sm overflow-hidden service-card">
-            <div class="service-img">
-              <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1111&q=80" alt="Financiamiento de equipos">
-            </div>
-            <div class="p-4 text-center font-semibold dark:text-white" id="service6Text">Financiamiento de equipos</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- MARTILLOS HIDRÁULICOS -->
-  <section class="relative py-16 overflow-hidden">
-    <div class="hammers-bg absolute inset-0 z-0"></div>
-    
-    <div class="relative z-10 max-w-7xl mx-auto px-6">
-      <!-- Línea amarilla arriba del título -->
-      <div class="section-line mb-8"></div>
-      
-      <div class="grid md:grid-cols-2 gap-12 mb-16">
-        <!-- Texto a la izquierda -->
-        <div class="flex flex-col justify-center">
-          <h2 class="text-3xl font-extrabold mb-6 dark:text-white title-lux-line" id="hammersTitle">LA LÍNEA MÁS AMPLIA EN<br>MARTILLOS HIDRÁULICOS</h2>
-          <p class="text-gray-700 dark:text-gray-300 mb-8 leading-relaxed" id="hammersDescription">
-            En SOLUMAQ ponemos a tu disposición una amplia gama de martillos hidráulicos para excavadoras, retroexcavadoras y minicargadores. Diseñados para ofrecer potencia, durabilidad y eficiencia, nuestros martillos se adaptan a cualquier tipo de obra en construcción y minería, brindando soluciones confiables para cada necesidad.
-          </p>
-          <button class="bg-[var(--yellow)] text-solumaqBlack font-bold px-8 py-4 rounded-sm hover:bg-yellow-500 transition-colors w-fit" id="hammersButton">
-            VER PRODUCTOS
-          </button>
-        </div>
-        
-        <!-- Imagen a la derecha -->
-        <div class="bg-white dark:bg-darkCard rounded-sm overflow-hidden shadow-md" style="height: 600px;">
-          <img src="photos/Imagen_de_WhatsApp_2025-11-07_a_las_09.13.43_f6286618-removebg-preview.png" 
-               alt="Martillos hidráulicos para excavadoras" 
-               class="w-full h-full object-cover">
-        </div>
-      </div>
-      
-      <!-- Línea de marcas de martillos -->
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-        <div class="bg-white dark:bg-darkCard p-6 rounded-sm shadow-md flex flex-col items-center justify-center text-center h-32">
-          <img src="imagen/images1.png" alt="SOOSAN" class="h-100 object-contain mb-2">
-        </div>
-        <div class="bg-white dark:bg-darkCard p-6 rounded-sm shadow-md flex items-center justify-center h-32">
-          <img src="imagen/Bobcat-Logo.jpg" alt="Bobcat Logo" class="h-100 object-contain mb-2">
-        </div>
-        <div class="bg-white dark:bg-darkCard p-6 rounded-sm shadow-md flex items-center justify-center h-32">
-          <img src="imagen/Sany-Logo.wine.png" alt="Sany Logo" class="h-100 object-contain mb-2">
-        </div>
-        <div class="bg-white dark:bg-darkCard p-6 rounded-sm shadow-md flex items-center justify-center h-32">
-          <img src="imagen/LOGO-DEVELON-JPG-4.jpg" alt="Develon Logo" class="h-100 object-contain mb-2">
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FILTROS -->
-  <section class="relative py-16 overflow-hidden">
-    <div class="filters-bg absolute inset-0 z-0"></div>
-    
-    <div class="relative z-10 max-w-7xl mx-auto px-6">
-      <!-- Texto arriba -->
-      <div class="mb-12">
-        <h2 class="text-3xl font-extrabold mb-6 dark:text-white title-lux-line" id="filtersTitle">PROTECCIÓN Y RENDIMIENTO EN CADA FILTRO</h2>
-        <p class="text-gray-700 dark:text-gray-300 mb-8 leading-relaxed" id="filtersDescription">
-          Ofrecemos filtros originales y de la más alta calidad para maquinaria de construcción, minería e industria. Contamos con un amplio portafolio de repuestos de marcas líderes como <strong>Develop</strong>, <strong>Bobcat</strong>, <strong>Sany</strong>, <strong>CAT</strong>, <strong>Perkins</strong> y <strong>Atlas Copco</strong>, garantizando el máximo rendimiento y protección de tus equipos.
+  <div class="hero-text-band">
+    <div class="hero-text-inner">
+      <h1 class="hero-title" id="hero-title">
+        SOLUMAQ = <span class="yl">soluciones que impulsan tu productividad</span>
+      </h1>
+      <div class="hero-body">
+        <p id="hero-p1">
+          Somos tu aliado estratégico en el sector construcción, minería e industria en la República Dominicana.
+          En SOLUMAQ reunimos en un solo lugar <strong>repuestos, herramientas y equipos</strong> originales
+          de las marcas más reconocidas del mercado. Contamos con la línea más amplia de martillos hidráulicos,
+          garantizando soluciones adaptadas a cada desafío de tus proyectos.
         </p>
-        <button class="bg-[var(--yellow)] text-solumaqBlack font-bold px-8 py-4 rounded-sm hover:bg-yellow-500 transition-colors w-fit" id="filtersButton">
+        <p style="margin-top:16px" id="hero-p2">
+          Nuestro compromiso es brindar <strong>calidad, respaldo y garantías</strong> reales en cada producto,
+          junto con un servicio confiable que asegura la continuidad de tus operaciones. Más que proveedores,
+          somos un aliado estratégico que impulsa tu productividad con soluciones en maquinaria diseñadas para
+          maximizar resultados.
+        </p>
+      </div>
+      <div class="hero-divider"></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════
+     SERVICIOS
+══════════════════════════════════════════════ -->
+<section class="services-section section-pad" id="servicios">
+  <div class="container">
+    <div class="services-layout">
+
+      <!-- Contact form -->
+      <div class="contact-form-card">
+        <h3 id="form-title">Solicita más información</h3>
+        <input  class="cf-input" type="text"   id="f-name"    placeholder="Nombre *"   required />
+        <input  class="cf-input" type="tel"    id="f-phone"   placeholder="Teléfono *" required />
+        <input  class="cf-input" type="email"  id="f-email"   placeholder="Email *"    required />
+        <input  class="cf-input" type="text"   id="f-company" placeholder="Empresa *"  required />
+        <textarea class="cf-input" id="f-msg"  rows="3"       placeholder="Mensaje *"  required></textarea>
+        <select class="cf-input cf-select" id="f-select">
+          <option id="fo-1">Venta de equipos</option>
+          <option id="fo-2">Renta de equipos</option>
+          <option id="fo-3">Repuestos</option>
+        </select>
+        <button class="cf-submit" id="form-btn">Enviar</button>
+      </div>
+
+      <!-- Services grid -->
+      <div>
+        <p class="eyebrow" id="srv-eyebrow">Lo que ofrecemos</p>
+        <h2 class="section-title" id="srv-title">Nuestros <span class="yl">Servicios</span></h2>
+        <div class="title-bar"></div>
+
+        <div class="services-grid" style="margin-top:24px">
+
+          <div class="service-card">
+            <img class="service-card-img"
+                 src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=600&q=70"
+                 alt="Ventas" loading="lazy" />
+            <div class="service-card-label" id="srv-1">Ventas</div>
+          </div>
+
+          <div class="service-card">
+            <img class="service-card-img"
+                 src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=600&q=70"
+                 alt="Renta de equipos" loading="lazy" />
+            <div class="service-card-label" id="srv-2">Renta de equipos</div>
+          </div>
+
+          <div class="service-card">
+            <img class="service-card-img"
+                 src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=600&q=70"
+                 alt="Asistencia Técnica" loading="lazy" />
+            <div class="service-card-label" id="srv-3">Asistencia Técnica</div>
+          </div>
+
+          <div class="service-card">
+            <img class="service-card-img"
+                 src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&w=600&q=70"
+                 alt="Tienda de Repuestos" loading="lazy" />
+            <div class="service-card-label" id="srv-4">Tienda de Repuestos</div>
+          </div>
+
+          <div class="service-card">
+            <img class="service-card-img"
+                 src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=600&q=70"
+                 alt="Respaldo SOLUMAQ" loading="lazy" />
+            <div class="service-card-label" id="srv-5">Respaldo SOLUMAQ</div>
+          </div>
+
+          <div class="service-card">
+            <img class="service-card-img"
+                 src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=600&q=70"
+                 alt="Financiamiento" loading="lazy" />
+            <div class="service-card-label" id="srv-6">Financiamiento de equipos</div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════
+     MARTILLOS HIDRÁULICOS
+══════════════════════════════════════════════ -->
+<section class="hammers-section section-pad" id="productos">
+  <div class="container">
+
+    <div class="hammers-layout">
+
+      <!-- Text -->
+      <div>
+        <p class="eyebrow" id="hmr-eyebrow">Nuestra especialidad</p>
+        <h2 class="section-title" id="hmr-title">
+          LA LÍNEA MÁS AMPLIA EN<br><span class="yl">MARTILLOS HIDRÁULICOS</span>
+        </h2>
+        <div class="title-bar"></div>
+        <p class="hammers-desc" id="hmr-desc">
+          En SOLUMAQ ponemos a tu disposición una amplia gama de martillos hidráulicos para excavadoras,
+          retroexcavadoras y minicargadores. Diseñados para ofrecer potencia, durabilidad y eficiencia,
+          nuestros martillos se adaptan a cualquier tipo de obra en construcción y minería, brindando
+          soluciones confiables para cada necesidad.
+        </p>
+        <a href="productos.html" class="btn-yellow" id="hmr-btn"
+           style="display:inline-block;background:var(--yellow);color:#000;font-family:var(--ff-display);font-size:17px;letter-spacing:1px;padding:13px 32px;border-radius:var(--r-sm);transition:all var(--ease);"
+           onmouseover="this.style.background='var(--yellow-dk)';this.style.transform='translateY(-2px)'"
+           onmouseout="this.style.background='var(--yellow)';this.style.transform='translateY(0)'">
           VER PRODUCTOS
-        </button>
+        </a>
       </div>
-      
-      <!-- Imagen abajo -->
-      <div class="bg-white dark:bg-darkCard rounded-sm overflow-hidden shadow-md mb-12" style="height: 400px;">
-        <img src="photos/Imagen_de_WhatsApp_2025-11-07_a_las_09.13.55_87d8f7f2-removebg-preview.png" 
-             alt="Filtros y repuestos para maquinaria" 
-             class="w-full h-full object-cover">
+
+      <!-- Image -->
+      <div class="hammers-img-wrap">
+        <img src="photos/Imagen_de_WhatsApp_2025-11-07_a_las_09.13.43_f6286618-removebg-preview.png"
+             alt="Martillos hidráulicos SOLUMAQ"
+             loading="lazy" />
       </div>
-      
-      <!-- Línea de marcas de filtros -->
-      <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
-        <div class="bg-white dark:bg-darkCard p-4 rounded-sm shadow-md flex items-center justify-center h-24">
-          <img src="imagen/Bobcat-Logo.jpg" alt="Bobcat Logo" class="h-100 object-contain mb-2">
-        </div>
-        <div class="bg-white dark:bg-darkCard p-4 rounded-sm shadow-md flex items-center justify-center h-24">
-          <img src="imagen/Sany-Logo.wine.png" alt="Sany Logo" class="h-100 object-contain mb-2">
-        </div>
-        <div class="bg-white dark:bg-darkCard p-4 rounded-sm shadow-md flex items-center justify-center h-24">
-          <img src="imagen/LOGO-DEVELON-JPG-4.jpg" alt="Develon Logo" class="h-100 object-contain mb-2">
-        </div>
-        <div class="bg-white dark:bg-darkCard p-4 rounded-sm shadow-md flex items-center justify-center h-24">
-          <img src="imagen/Perkins-Logo.svg.png" alt="Perkins Logo" class="h-100 object-contain mb-2">
-        </div>
-        <div class="bg-white dark:bg-darkCard p-4 rounded-sm shadow-md flex items-center justify-center h-24">
-          <img src="imagen/Atlas-Copco-Logo.svg.png" alt="Atlas Copco Logo" class="h-100 object-contain mb-2">
-        </div>
+
+    </div>
+
+    <!-- Brand logos -->
+    <div class="brands-row">
+      <div class="brand-card">
+        <span class="bn">SOOSAN</span>
+        <span class="bs">HEAVY INDUSTRIES</span>
+      </div>
+      <div class="brand-card">
+        <span class="bn">Bobcat</span>
+      </div>
+      <div class="brand-card">
+        <span class="bn">SANY</span>
+      </div>
+      <div class="brand-card">
+        <span class="bn">DEVELON</span>
       </div>
     </div>
-  </section>
 
-  <!-- FOOTER -->
-  <footer class="bg-solumaqBlack text-white py-12">
-    <div class="max-w-7xl mx-auto px-6">
-      <div class="grid md:grid-cols-3 gap-8">
-        <!-- Columna izquierda - Logo y descripción -->
-        <div class="md:col-span-1">
-          <div class="flex items-center mb-4">
-            <div class="text-2xl font-extrabold tracking-wide">
-              <span class="text-white">SÓLU</span>
-              <span class="text-solumaqYellow">MAQ</span>
-            </div>
-          </div>
-          <p class="text-gray-300 mb-6 leading-relaxed text-sm" id="footerDescription">
-            Soluciones en maquinaria diseñadas para acompañar tus proyectos, garantizando productividad, confianza y respaldo en cada etapa, impulsando tu crecimiento con la mejor calidad del mercado.
-          </p>
-          <!-- Redes sociales -->
-          <div class="flex space-x-4">
-            <a href="#" class="text-gray-300 hover:text-solumaqYellow transition-colors">
-              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path>
-              </svg>
-            </a>
-            <a href="#" class="text-gray-300 hover:text-solumaqYellow transition-colors">
-              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                <path fill-rule="evenodd" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10c5.51 0 10-4.48 10-10S17.51 2 12 2zm6.605 4.61a8.502 8.502 0 011.93 5.314c-.281-.054-3.101-.629-5.943-.271-.065-.141-.12-.293-.184-.445a25.416 25.416 0 00-.564-1.236c3.145-1.28 4.577-3.124 4.761-3.362zM12 3.475c2.17 0 4.154.813 5.662 2.148-.152.216-1.443 1.941-4.48 3.08-1.399-2.57-2.95-4.675-3.189-5A8.687 8.687 0 0112 3.475zm-3.633.803a53.896 53.896 0 013.167 4.935c-3.992 1.063-7.517 1.04-7.896 1.04a8.581 8.581 0 014.729-5.975zM3.453 12.01v-.26c.37.01 4.512.065 8.775-1.215.25.477.477.965.694 1.453-.109.033-.228.065-.336.098-4.404 1.42-6.747 5.303-6.942 5.629a8.522 8.522 0 01-2.19-5.705zM12 20.547a8.482 8.482 0 01-5.239-1.8c.152-.315 1.888-3.656 6.703-5.337.022-.01.033-.01.054-.022a35.318 35.318 0 011.823 6.475 8.4 8.4 0 01-3.341.684zm4.761-1.465c-.086-.52-.542-3.015-1.659-6.084 2.679-.423 5.022.271 5.314.369a8.468 8.468 0 01-3.655 5.715z" clip-rule="evenodd"></path>
-              </svg>
-            </a>
-            <a href="#" class="text-gray-300 hover:text-solumaqYellow transition-colors">
-              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path>
-              </svg>
-            </a>
-            <a href="#" class="text-gray-300 hover:text-solumaqYellow transition-colors">
-              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm4.5 14.5h-9v-9h9v9z" clip-rule="evenodd"></path>
-              </svg>
-            </a>
-          </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════
+     FILTROS
+══════════════════════════════════════════════ -->
+<section class="filters-section section-pad">
+  <div class="container">
+
+    <div class="filters-layout">
+
+      <!-- Image -->
+      <div class="filters-img-wrap">
+        <img src="photos/Imagen_de_WhatsApp_2025-11-07_a_las_09.13.55_87d8f7f2-removebg-preview.png"
+             alt="Filtros y repuestos para maquinaria"
+             loading="lazy" />
+      </div>
+
+      <!-- Text -->
+      <div>
+        <p class="eyebrow" id="flt-eyebrow">Repuestos originales</p>
+        <h2 class="section-title" id="flt-title">
+          PROTECCIÓN Y RENDIMIENTO<br><span class="yl">EN CADA FILTRO</span>
+        </h2>
+        <div class="title-bar"></div>
+        <p class="hammers-desc" id="flt-desc">
+          Ofrecemos filtros originales y de la más alta calidad para maquinaria de construcción, minería e industria.
+          Contamos con un amplio portafolio de repuestos de marcas líderes como <strong>Develon</strong>,
+          <strong>Bobcat</strong>, <strong>Sany</strong>, <strong>CAT</strong>, <strong>Perkins</strong>
+          y <strong>Atlas Copco</strong>, garantizando el máximo rendimiento y protección de tus equipos.
+        </p>
+        <a href="productos.html" id="flt-btn"
+           style="display:inline-block;background:var(--yellow);color:#000;font-family:var(--ff-display);font-size:17px;letter-spacing:1px;padding:13px 32px;border-radius:var(--r-sm);transition:all var(--ease);"
+           onmouseover="this.style.background='var(--yellow-dk)';this.style.transform='translateY(-2px)'"
+           onmouseout="this.style.background='var(--yellow)';this.style.transform='translateY(0)'">
+          VER PRODUCTOS
+        </a>
+      </div>
+
+    </div>
+
+    <!-- Brand logos -->
+    <div class="filters-brands">
+      <div class="brand-card"><span class="bn">Bobcat</span></div>
+      <div class="brand-card"><span class="bn">SANY</span></div>
+      <div class="brand-card"><span class="bn">DEVELON</span></div>
+      <div class="brand-card"><span class="bn">Perkins</span></div>
+      <div class="brand-card"><span class="bn">Atlas Copco</span></div>
+      <div class="brand-card"><span class="bn">CAT</span></div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════
+     FOOTER
+══════════════════════════════════════════════ -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+
+      <!-- Brand -->
+      <div class="footer-brand">
+        <div class="logo-mark">
+          <span class="p1">SÓLU</span><span class="p2">MAQ</span>
         </div>
-        
-        <!-- Columna central - Enlaces rápidos -->
-        <div class="md:col-span-1">
-          <h3 class="text-lg font-bold mb-4 text-solumaqYellow">Enlaces Rápidos</h3>
-          <div class="space-y-2 text-sm">
-            <a href="#inicio" class="block text-gray-300 hover:text-solumaqYellow transition-colors">Inicio</a>
-            <a href="#nosotros" class="block text-gray-300 hover:text-solumaqYellow transition-colors">Nosotros</a>
-            <a href="#servicios" class="block text-gray-300 hover:text-solumaqYellow transition-colors">Servicios</a>
-            <a href="#productos" class="block text-gray-300 hover:text-solumaqYellow transition-colors">Productos</a>
-            <a href="#contacto" class="block text-gray-300 hover:text-solumaqYellow transition-colors">Contacto</a>
-          </div>
-        </div>
-        
-        <!-- Columna derecha - Contacto -->
-        <div class="md:col-span-1">
-          <h3 class="text-lg font-bold mb-4 text-solumaqYellow" id="footerContactTitle">Contacto</h3>
-          <div class="space-y-3 text-sm text-gray-300">
-            <div>
-              <p class="font-semibold" id="footerAddressTitle">Avenida Independencia, Km. 10, Local 109</p>
-              <p id="footerCity">Santo Domingo, República Dominicana.</p>
-            </div>
-            <div>
-              <p id="footerPhone">📞 (809) 706-3525</p>
-              <p id="footerEmail">✉️ info@solumaqrd.com</p>
-            </div>
-            <div>
-              <p class="font-semibold" id="footerHoursTitle">Horario de atención:</p>
-              <p id="footerWeekHours">Lun - Vie: 8:00 a.m. - 6:00 p.m.</p>
-              <p id="footerSatHours">Sáb: 8:00 a.m. - 2:00 p.m.</p>
-            </div>
-          </div>
+        <p class="footer-desc" id="ft-desc">
+          Soluciones en maquinaria diseñadas para acompañar tus proyectos, garantizando productividad,
+          confianza y respaldo en cada etapa, impulsando tu crecimiento con la mejor calidad del mercado.
+        </p>
+        <div class="footer-social">
+          <a href="#" class="social-btn" aria-label="Facebook">f</a>
+          <a href="#" class="social-btn" aria-label="Instagram">in</a>
+          <a href="#" class="social-btn" aria-label="WhatsApp">wp</a>
+          <a href="#" class="social-btn" aria-label="LinkedIn">li</a>
         </div>
       </div>
-      
-      <!-- Línea divisoria y copyright -->
-      <div class="border-t border-gray-700 mt-8 pt-6">
-        <div class="text-center text-gray-400 text-xs" id="footerCopyright">
-          © <span id="year"></span> SOLUMAQ — Soluciones que impulsan tu productividad
+
+      <!-- Links -->
+      <div class="footer-col">
+        <h4 id="ft-links-title">Enlaces Rápidos</h4>
+        <ul class="footer-links">
+          <li><a href="index.html"     id="ft-l1">Inicio</a></li>
+          <li><a href="nosotros.html"  id="ft-l2">Nosotros</a></li>
+          <li><a href="servicios.html" id="ft-l3">Servicios</a></li>
+          <li><a href="productos.html" id="ft-l4">Productos</a></li>
+          <li><a href="contacto.html"  id="ft-l5">Contacto</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div class="footer-col">
+        <h4 id="ft-contact-title">Contacto</h4>
+
+        <div class="footer-contact-item">
+          <span class="fi">📍</span>
+          <div>
+            <strong id="ft-addr">Av. Independencia, Km. 10, Local 109</strong>
+            <span id="ft-city">Santo Domingo, República Dominicana</span>
+          </div>
         </div>
+
+        <div class="footer-contact-item">
+          <span class="fi">📞</span>
+          <a href="tel:+18097063525" style="color:inherit;transition:color var(--ease)"
+             onmouseover="this.style.color='var(--yellow)'" onmouseout="this.style.color=''"
+             id="ft-phone">(809) 706-3525</a>
+        </div>
+
+        <div class="footer-contact-item">
+          <span class="fi">✉️</span>
+          <a href="mailto:info@solumaqrd.com" style="color:inherit;transition:color var(--ease)"
+             onmouseover="this.style.color='var(--yellow)'" onmouseout="this.style.color=''"
+             id="ft-email">info@solumaqrd.com</a>
+        </div>
+
+        <div class="footer-contact-item">
+          <span class="fi">🕐</span>
+          <div>
+            <span id="ft-hrs1">Lun – Vie: 8:00 a.m. – 6:00 p.m.</span><br>
+            <span id="ft-hrs2">Sáb: 8:00 a.m. – 2:00 p.m.</span>
+          </div>
+        </div>
+
       </div>
     </div>
-  </footer>
 
- <script src="js/index.js"></script>
+    <!-- Bottom bar -->
+    <div class="footer-bottom">
+      <span id="ft-copy">© <span id="yr"></span> SOLUMAQ — Soluciones que impulsan tu productividad</span>
+      <span id="ft-rights">Todos los derechos reservados</span>
+    </div>
+  </div>
+</footer>
+
+
+<script src="js/index.js"></script>
 </body>
 </html>
