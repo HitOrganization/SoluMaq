@@ -1,59 +1,263 @@
 <!DOCTYPE html>
-<html>
-   <head>
-    
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto - Solumaq</title>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contacto — SOLUMAQ</title>
+  <meta name="description" content="Contáctanos en SOLUMAQ. Estamos en Av. Independencia, Km. 10, Santo Domingo. Llámanos al (809) 706-3525 o escríbenos a info@solumaqrd.com." />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body data-page="contacto">
 
-    <!-- Cargar Tailwind globalmente -->
-    <script src="https://cdn.tailwindcss.com"></script>
+<!-- TOP BAR -->
+<div class="top-bar">
+  <div class="container">
+    <div class="topbar-phone">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:14px;height:14px;stroke:var(--yellow)"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8 19.79 19.79 0 01.5 1.18 2 2 0 012.48 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.18 6.18l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+      <span>(809) 706-3525</span>
+    </div>
+    <div class="topbar-controls">
+      <div class="toggle-group">
+        <span data-i18n="tb-dark-label">Modo oscuro</span>
+        <label class="switch"><input type="checkbox" id="darkToggle" /><span class="slider"></span></label>
+      </div>
+      <div class="toggle-group">
+        <span data-i18n="tb-lang1">ES</span>
+        <label class="switch"><input type="checkbox" id="langToggle" /><span class="slider"></span></label>
+        <span data-i18n="tb-lang2">EN</span>
+      </div>
+    </div>
+  </div>
+</div>
 
-  </head>
-  <body>
+<!-- HEADER -->
+<header class="site-header">
+  <div class="container">
+    <a href="index.html" class="logo" aria-label="SOLUMAQ – Inicio">
+      <div class="logo-mark"><span class="p1">SÓLU</span><span class="p2">MAQ</span></div>
+      <div class="logo-sub" data-i18n="hdr-slogan">Soluciones en Maquinaria</div>
+    </a>
+    <nav class="main-nav">
+      <a href="index.html"     class="nav-link" data-i18n="nav-inicio">Inicio</a>
+      <a href="nosotros.html"  class="nav-link" data-i18n="nav-nosotros">Nosotros</a>
+      <a href="servicios.html" class="nav-link" data-i18n="nav-servicios">Servicios</a>
+      <a href="productos.html" class="nav-link" data-i18n="nav-productos">Productos</a>
+      <a href="contacto.html"  class="nav-cta nav-link active" data-i18n="nav-contacto">Contacto</a>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Menú" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <nav class="mobile-nav" id="mobileNav">
+    <a href="index.html"     class="nav-link" data-i18n="nav-inicio">Inicio</a>
+    <a href="nosotros.html"  class="nav-link" data-i18n="nav-nosotros">Nosotros</a>
+    <a href="servicios.html" class="nav-link" data-i18n="nav-servicios">Servicios</a>
+    <a href="productos.html" class="nav-link" data-i18n="nav-productos">Productos</a>
+    <a href="contacto.html"  class="nav-cta"  data-i18n="nav-contacto">Contacto</a>
+  </nav>
+</header>
 
-    <main>
 
-    <div id="header"></div>
-     
-    <main class="">
-      <h1 class="">
-        Hola
-      </h1>
-      <p class="">
-        Este es el contenido de contacto.html.
-      </p>
-    </main>
+<!-- HERO -->
+<section class="page-hero">
+  <div class="container page-hero-inner">
+    <p class="page-hero-eyebrow" data-i18n="ct-eyebrow">Estamos para ayudarte</p>
+    <h1 class="page-hero-title" data-i18n="ct-hero-title">HABLEMOS<br><span class="wh">HOY</span></h1>
+  </div>
+</section>
 
-    <div id="footer"></div>
-    
-  <!-- CARGA DE HEADER Y FOOTER -->
-  <script>
-    async function loadComponent(id, file) {
-      const container = document.getElementById(id);
-      const response = await fetch(file);
-      const html = await response.text();
 
-    const temp = document.createElement("div");
-    temp.innerHTML = html;
-  
-    container.innerHTML = html;
+<!-- CONTACT SECTION -->
+<section class="contact-section section-pad">
+  <div class="container">
+    <div class="contact-layout">
 
-    temp.querySelectorAll("script").forEach(oldScript => {
-      const newScript = document.createElement("script");
+      <!-- INFO -->
+      <div class="contact-info">
 
-      if (oldScript.src) {
-        newScript.src = oldScript.src;
-      } else {
-        newScript.textContent = oldScript.textContent;
-      }
+        <div>
+          <p class="eyebrow" data-i18n="ct-info-eyebrow">Información de contacto</p>
+          <h2 class="section-title" data-i18n="ct-info-title">¿Cómo llegar <span class="yl">a nosotros?</span></h2>
+          <div class="title-bar"></div>
+        </div>
 
-      document.body.appendChild(newScript);
-    });
-  }
+        <div class="info-block">
+          <div class="info-icon">📍</div>
+          <div class="info-body">
+            <div class="info-label" data-i18n="ct-addr-label">Dirección</div>
+            <div class="info-value">
+              <strong data-i18n="ft-addr">Av. Independencia, Km. 10, Local 109</strong><br>
+              <span data-i18n="ft-city">Santo Domingo, República Dominicana</span>
+            </div>
+          </div>
+        </div>
 
-  loadComponent("header", "header.html");
-  loadComponent("footer", "footer.html");
-  </script>
-  </body>
+        <div class="info-block">
+          <div class="info-icon">📞</div>
+          <div class="info-body">
+            <div class="info-label" data-i18n="ct-phone-label">Teléfono</div>
+            <div class="info-value">
+              <a href="tel:+18097063525">(809) 706-3525</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-block">
+          <div class="info-icon">✉️</div>
+          <div class="info-body">
+            <div class="info-label" data-i18n="ct-email-label">Correo electrónico</div>
+            <div class="info-value">
+              <a href="mailto:info@solumaqrd.com">info@solumaqrd.com</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-block">
+          <div class="info-icon">🕐</div>
+          <div class="info-body">
+            <div class="info-label" data-i18n="ct-hours-label">Horario de atención</div>
+            <div class="info-value">
+              <table class="hours-table">
+                <tr>
+                  <td data-i18n="ct-hrs-week-label">Lun – Vie</td>
+                  <td data-i18n="ct-hrs-week">8:00 a.m. – 6:00 p.m.</td>
+                </tr>
+                <tr>
+                  <td data-i18n="ct-hrs-sat-label">Sábado</td>
+                  <td data-i18n="ct-hrs-sat">8:00 a.m. – 2:00 p.m.</td>
+                </tr>
+                <tr>
+                  <td data-i18n="ct-hrs-sun-label">Domingo</td>
+                  <td data-i18n="ct-hrs-sun">Cerrado</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <div class="social-strip">
+          <span class="social-strip-label" data-i18n="ct-social-label">Síguenos</span>
+          <a href="#" class="soc-btn" aria-label="Facebook">f</a>
+          <a href="#" class="soc-btn" aria-label="Instagram">ig</a>
+          <a href="#" class="soc-btn" aria-label="WhatsApp">wp</a>
+          <a href="#" class="soc-btn" aria-label="LinkedIn">in</a>
+        </div>
+
+      </div>
+
+      <!-- FORM -->
+      <div class="contact-form-wrap">
+        <h2 class="form-title" data-i18n="ct-form-title">Envíanos un mensaje</h2>
+        <p class="form-subtitle" data-i18n="ct-form-subtitle">Un asesor te responderá a la brevedad posible.</p>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" data-i18n="ct-lbl-name">Nombre</label>
+            <input class="form-input" type="text" id="ct-name"
+                   data-i18n-placeholder="ct-ph-name" placeholder="Tu nombre" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label" data-i18n="ct-lbl-company">Empresa</label>
+            <input class="form-input" type="text" id="ct-company"
+                   data-i18n-placeholder="ct-ph-company" placeholder="Tu empresa" />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" data-i18n="ct-lbl-phone">Teléfono</label>
+            <input class="form-input" type="tel" id="ct-phone"
+                   data-i18n-placeholder="ct-ph-phone" placeholder="(809) 000-0000" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label" data-i18n="ct-lbl-email">Email</label>
+            <input class="form-input" type="email" id="ct-email"
+                   data-i18n-placeholder="ct-ph-email" placeholder="tu@email.com" required />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" data-i18n="ct-lbl-service">Servicio de interés</label>
+          <select class="form-select" id="ct-service">
+            <option data-i18n="ct-opt1">Venta de equipos</option>
+            <option data-i18n="ct-opt2">Renta de equipos</option>
+            <option data-i18n="ct-opt3">Asistencia técnica</option>
+            <option data-i18n="ct-opt4">Repuestos y filtros</option>
+            <option data-i18n="ct-opt5">Financiamiento</option>
+            <option data-i18n="ct-opt6">Otra consulta</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" data-i18n="ct-lbl-msg">Mensaje</label>
+          <textarea class="form-textarea" id="ct-msg"
+                    data-i18n-placeholder="ct-ph-msg"
+                    placeholder="Cuéntanos sobre tu proyecto o consulta..." required></textarea>
+        </div>
+
+        <button class="form-submit" id="ct-submit" data-i18n="ct-submit">Enviar mensaje</button>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- MAP -->
+<div class="map-band">
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3784.1234567890!2d-69.9800000!3d18.4700000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8ea5617c765efbb3%3A0x9c5e3462babc22a3!2sAv.%20Independencia%2C%20Santo%20Domingo!5e0!3m2!1ses!2sdo!4v1234567890"
+    allowfullscreen=""
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade"
+    title="Ubicación SOLUMAQ — Av. Independencia, Santo Domingo">
+  </iframe>
+</div>
+
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo-mark"><span class="p1">SÓLU</span><span class="p2">MAQ</span></div>
+        <p class="footer-desc" data-i18n="ft-desc">Soluciones en maquinaria diseñadas para acompañar tus proyectos, garantizando productividad, confianza y respaldo en cada etapa.</p>
+        <div class="footer-social">
+          <a href="#" class="social-btn" aria-label="Facebook">f</a>
+          <a href="#" class="social-btn" aria-label="Instagram">in</a>
+          <a href="#" class="social-btn" aria-label="WhatsApp">wp</a>
+          <a href="#" class="social-btn" aria-label="LinkedIn">li</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="ft-links-title">Enlaces Rápidos</h4>
+        <ul class="footer-links">
+          <li><a href="index.html"     data-i18n="ft-l1">Inicio</a></li>
+          <li><a href="nosotros.html"  data-i18n="ft-l2">Nosotros</a></li>
+          <li><a href="servicios.html" data-i18n="ft-l3">Servicios</a></li>
+          <li><a href="productos.html" data-i18n="ft-l4">Productos</a></li>
+          <li><a href="contacto.html"  data-i18n="ft-l5">Contacto</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="ft-contact-title">Contacto</h4>
+        <div class="footer-contact-item"><span class="fi">📍</span><div><strong data-i18n="ft-addr">Av. Independencia, Km. 10, Local 109</strong><span data-i18n="ft-city">Santo Domingo, República Dominicana</span></div></div>
+        <div class="footer-contact-item"><span class="fi">📞</span><a href="tel:+18097063525" style="color:inherit">(809) 706-3525</a></div>
+        <div class="footer-contact-item"><span class="fi">✉️</span><a href="mailto:info@solumaqrd.com" style="color:inherit">info@solumaqrd.com</a></div>
+        <div class="footer-contact-item"><span class="fi">🕐</span><div><span data-i18n="ft-hrs1">Lun – Vie: 8:00 a.m. – 6:00 p.m.</span><br><span data-i18n="ft-hrs2">Sáb: 8:00 a.m. – 2:00 p.m.</span></div></div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="yr"></span> <span data-i18n="ft-tagline">SOLUMAQ — Soluciones que impulsan tu productividad</span></span>
+      <span data-i18n="ft-rights">Todos los derechos reservados</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/translations.js"></script>
+<script src="js/darkmode.js"></script>
+<script src="js/language.js"></script>
+<script src="js/nav.js"></script>
+<script src="js/forms.js"></script>
+</body>
 </html>

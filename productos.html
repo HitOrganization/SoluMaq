@@ -1,164 +1,406 @@
 <!DOCTYPE html>
-<html>
-   <head>
-    
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Productos - Solumaq</title>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Productos — SOLUMAQ</title>
+  <meta name="description" content="Catálogo de productos SOLUMAQ: martillos hidráulicos SOOSAN, generadores Atlas Copco, filtros y repuestos para maquinaria pesada." />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body data-page="productos">
 
-    <!-- Cargar Tailwind globalmente -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="css/productos.css">
-
-
-  </head>
-  <body>
-    
-    <!-- Header -->
-    <div id="header"></div>
- 
- <!-- Contenido -->
- <main class="">
- 
- <div class="productos-title">PRODUCTOS</div>
- 
- <div class="grid-container">
- 
- <div class="item-box-1 product-item"
-    data-title="Martillos Hidráulicos"
-    data-desc="Herramientas de alto rendimiento ideales para demolición, excavación y trabajos pesados."
-    data-img="https://picsum.photos/seed/h1/600/400">
-    
-    <div class="item-img-1"></div>
-    <div class="item-text-1">MARTILLOS HIDRÁULICOS</div>
- </div>
-
-  <div class="item-box-2 product-item"
-    data-title="CUCHARONES DE EXCAVACIÓN"
-    data-desc="Texto de Ejemplo, un ejemplo de ejemplo hasta que se pueda dar texto. un saludo"
-    data-img="https://picsum.photos/seed/h2/600/400">
-    
-    <div class="item-img-2"></div>
-    <div class="item-text-2">CUCHARONES DE EXCAVACIÓN</div>
- </div>
- 
-
-  <div class="item-box-3 product-item"
-    data-title="CINCEL PARA MARTILLOS"
-    data-desc="Texto de Ejemplo, un ejemplo de ejemplo hasta que se pueda dar texto. un saludo"
-    data-img="https://picsum.photos/seed/h3/600/400">
-    
-    <div class="item-img-3"></div>
-    <div class="item-text-3">CINCEL PARA MARTILLOS</div>
- </div>
-
-  <div class="item-box-4 product-item"
-    data-title="Repuestos y Filtros"
-    data-desc="Texto de Ejemplo, un ejemplo de ejemplo hasta que se pueda dar texto. un saludo"
-    data-img="https://picsum.photos/seed/h4/600/400">
-    
-    <div class="item-img-4"></div>
-    <div class="item-text-4">Repuestos y Filtros</div>
-  </div>
- 
-  <div class="item-box-5 product-item"
-    data-title="Montacargas"
-    data-desc="Texto de Ejemplo, un ejemplo de ejemplo hasta que se pueda dar texto. un saludo"
-    data-img="https://picsum.photos/seed/h5/600/400">
-    
-    <div class="item-img-5"></div>
-    <div class="item-text-5">Montacargas</div>
-  </div>
- 
-  <div class="item-box-6 product-item"
-    data-title="Generadores Eléctricos"
-    data-desc="Texto de Ejemplo, un ejemplo de ejemplo hasta que se pueda dar texto. un saludo"
-    data-img="https://picsum.photos/seed/h6/600/400">
-  
-    <div class="item-img-6"></div>
-    <div class="item-text-6">Generadores Eléctricos</div>
-  </div>
-
-  <div class="item-box-7 product-item"
-    data-title="Compresores de aire"
-    data-desc="Texto de Ejemplo, un ejemplo de ejemplo hasta que se pueda dar texto. un saludo"
-    data-img="https://picsum.photos/seed/h7/600/400">
-    
-    <div class="item-img-7"></div>
-    <div class="item-text-7">Compresores de aire</div>
- </div>
- 
- <div class="item-box-8 product-item"
-    data-title="Torres de iluminación"
-    data-desc="Texto de Ejemplo, un ejemplo de ejemplo hasta que se pueda dar texto. un saludo"
-    data-img="https://picsum.photos/seed/h8/600/400">
-    
-    <div class="item-img-8"></div>
-    <div class="item-text-8">Torres de iluminación</div>
- </div>
-
- <div class="item-box-9 product-item"
-    data-title="Minicargadores"
-    data-desc="Texto de Ejemplo, un ejemplo de ejemplo hasta que se pueda dar texto. un saludo"
-    data-img="https://picsum.photos/seed/h9/600/400">
-
-    <div class="item-img-9"></div>
-    <div class="item-text-9">Minicargadores</div>
- </div>
- 
- </div>
- 
- <!-- Modal -->
-    <div id="productModal" class="hidden fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center p-4 z-50">
-        <div class="bg-white max-w-md w-full rounded-lg shadow-lg relative p-4">
-            
-            <!-- Botón cerrar -->
-            <button id="closeModal" class="absolute top-2 right-2 text-xl font-bold cursor-pointer">&times;</button>
-            
-            <!-- Imagen -->
-            <img id="modalImg" src="" class="w-full h-56 object-cover rounded">
-            
-            <!-- Título -->
-            <h2 id="modalTitle" class="text-2xl font-bold mt-4"></h2>
-            
-            <!-- Descripción -->
-            <p id="modalDesc" class="mt-2 text-gray-700"></p>
-        </div>
+<!-- TOP BAR -->
+<div class="top-bar">
+  <div class="container">
+    <div class="topbar-phone">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:14px;height:14px;stroke:var(--yellow)"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8 19.79 19.79 0 01.5 1.18 2 2 0 012.48 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.18 6.18l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+      <span>(809) 706-3525</span>
     </div>
-</main>
- 
-      <script src="js/productos.js"></script>
+    <div class="topbar-controls">
+      <div class="toggle-group">
+        <span data-i18n="tb-dark-label">Modo oscuro</span>
+        <label class="switch"><input type="checkbox" id="darkToggle" /><span class="slider"></span></label>
+      </div>
+      <div class="toggle-group">
+        <span data-i18n="tb-lang1">ES</span>
+        <label class="switch"><input type="checkbox" id="langToggle" /><span class="slider"></span></label>
+        <span data-i18n="tb-lang2">EN</span>
+      </div>
+    </div>
+  </div>
+</div>
 
-    <!-- Footer -->
-    <div id="footer"></div>
-    
-  <!-- CARGA DE HEADER Y FOOTER -->
-  <script>
-    async function loadComponent(id, file) {
-      const container = document.getElementById(id);
-      const response = await fetch(file);
-      const html = await response.text();
+<!-- HEADER -->
+<header class="site-header">
+  <div class="container">
+    <a href="index.html" class="logo" aria-label="SOLUMAQ – Inicio">
+      <div class="logo-mark"><span class="p1">SÓLU</span><span class="p2">MAQ</span></div>
+      <div class="logo-sub" data-i18n="hdr-slogan">Soluciones en Maquinaria</div>
+    </a>
+    <nav class="main-nav">
+      <a href="index.html"     class="nav-link" data-i18n="nav-inicio">Inicio</a>
+      <a href="nosotros.html"  class="nav-link" data-i18n="nav-nosotros">Nosotros</a>
+      <a href="servicios.html" class="nav-link" data-i18n="nav-servicios">Servicios</a>
+      <a href="productos.html" class="nav-link active" data-i18n="nav-productos">Productos</a>
+      <a href="contacto.html"  class="nav-cta nav-link" data-i18n="nav-contacto">Contacto</a>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Menú" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <nav class="mobile-nav" id="mobileNav">
+    <a href="index.html"     class="nav-link" data-i18n="nav-inicio">Inicio</a>
+    <a href="nosotros.html"  class="nav-link" data-i18n="nav-nosotros">Nosotros</a>
+    <a href="servicios.html" class="nav-link" data-i18n="nav-servicios">Servicios</a>
+    <a href="productos.html" class="nav-link" data-i18n="nav-productos">Productos</a>
+    <a href="contacto.html"  class="nav-cta"  data-i18n="nav-contacto">Contacto</a>
+  </nav>
+</header>
 
-    const temp = document.createElement("div");
-    temp.innerHTML = html;
-  
-    container.innerHTML = html;
 
-    temp.querySelectorAll("script").forEach(oldScript => {
-      const newScript = document.createElement("script");
+<!-- HERO -->
+<section class="page-hero">
+  <div class="container page-hero-inner">
+    <p class="page-hero-eyebrow" data-i18n="pr-hero-eyebrow">Catálogo SOLUMAQ</p>
+    <h1 class="page-hero-title" data-i18n="pr-hero-title">NUESTROS<br><span class="wh">PRODUCTOS</span></h1>
+  </div>
+</section>
 
-      if (oldScript.src) {
-        newScript.src = oldScript.src;
-      } else {
-        newScript.textContent = oldScript.textContent;
-      }
 
-      document.body.appendChild(newScript);
-    });
-  }
+<!-- TABS -->
+<div class="tabs-wrap">
+  <div class="container">
+    <div class="tabs-nav" role="tablist">
+      <button class="tab-btn active" data-tab="martillos" role="tab" data-i18n="tab-martillos">Martillos Hidráulicos</button>
+      <button class="tab-btn" data-tab="generadores" role="tab" data-i18n="tab-generadores">Generadores</button>
+      <button class="tab-btn" data-tab="filtros" role="tab" data-i18n="tab-filtros">Filtros &amp; Repuestos</button>
+    </div>
+  </div>
+</div>
 
-  loadComponent("header", "header.html");
-  loadComponent("footer", "footer.html");
-  </script>
-  </body>
+
+<!-- PANELS -->
+<section class="products-section">
+  <div class="container">
+
+    <!-- ══ MARTILLOS ══ -->
+    <div class="tab-panel active" id="panel-martillos">
+
+      <div class="cat-header">
+        <div class="cat-header-img">
+          <img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=800&q=70"
+               alt="Martillos hidráulicos SOOSAN" loading="lazy" />
+        </div>
+        <div class="cat-header-text">
+          <p class="eyebrow" data-i18n="mar-eyebrow">SOOSAN HEAVY INDUSTRIES</p>
+          <h2 class="cat-title" data-i18n="mar-title">Martillos<br><span class="yl">Hidráulicos</span></h2>
+          <div class="title-bar"></div>
+          <p class="cat-desc" data-i18n="mar-desc">Fundada en 1984 en Corea del Sur, SOOSAN es uno de los fabricantes líderes de martillos hidráulicos y equipos de demolición. Con presencia global, reconocida por la calidad y durabilidad de sus equipos especialmente en trabajos de alto impacto en canteras, minería y demolición urbana.</p>
+        </div>
+      </div>
+
+      <!-- Specs table -->
+      <div class="table-wrap">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th data-i18n="th-model">Modelo</th>
+              <th data-i18n="th-weight">Peso</th>
+              <th data-i18n="th-carrier">Equipo Portador</th>
+              <th data-i18n="th-flow">Flujo de Aceite</th>
+              <th data-i18n="th-pressure">Presión Operativa</th>
+              <th data-i18n="th-impact">Tasa de Impacto</th>
+              <th data-i18n="th-chisel">Ø Cincel</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>SB-43</td><td>375 kg</td><td>6 – 9 ton</td><td>50 – 90 l/m</td><td>120 – 150 bar</td><td>400 – 800 bpm</td><td>75 mm</td></tr>
+            <tr><td>SB-50</td><td>915 kg</td><td>11 – 16 ton</td><td>50 – 90 l/m</td><td>120 – 150 bar</td><td>350 – 700 bpm</td><td>100 mm</td></tr>
+            <tr><td>SB-60</td><td>1,297 kg</td><td>15 – 18 ton</td><td>90 – 150 l/m</td><td>120 – 180 bar</td><td>350 – 650 bpm</td><td>125 mm</td></tr>
+            <tr><td>SB-70</td><td>1,500 kg</td><td>16 – 21 ton</td><td>100 – 150 l/m</td><td>160 – 180 bar</td><td>350 – 600 bpm</td><td>135 mm</td></tr>
+            <tr><td>SB-81</td><td>1,766 kg</td><td>18 – 26 ton</td><td>120 – 180 l/m</td><td>160 – 180 bar</td><td>350 – 500 bpm</td><td>140 mm</td></tr>
+            <tr><td>SB-100</td><td>2,071 kg</td><td>25 – 30 ton</td><td>150 – 210 l/m</td><td>160 – 180 bar</td><td>300 – 450 bpm</td><td>150 mm</td></tr>
+            <tr><td>SB-121</td><td>2,362 kg</td><td>28 – 35 ton</td><td>180 – 240 l/m</td><td>160 – 180 bar</td><td>300 – 450 bpm</td><td>155 mm</td></tr>
+            <tr><td>SB-131</td><td>2,071 kg</td><td>25 – 30 ton</td><td>150 – 210 l/m</td><td>160 – 180 bar</td><td>300 – 450 bpm</td><td>150 mm</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Cards -->
+      <div class="products-grid">
+        <div class="prod-card">
+          <img class="prod-card-img" src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=400&q=70" alt="Soosan SB-43" loading="lazy" />
+          <div class="prod-card-body">
+            <div class="prod-card-name">Soosan SB-43</div>
+            <div class="prod-specs">
+              <div class="prod-spec-row"><span class="spec-k">Peso</span><span class="spec-v">375 kg</span></div>
+              <div class="prod-spec-row"><span class="spec-k">Portador</span><span class="spec-v">6 – 9 ton</span></div>
+              <div class="prod-spec-row"><span class="spec-k">Impacto</span><span class="spec-v">400 – 800 bpm</span></div>
+              <div class="prod-spec-row"><span class="spec-k">Cincel</span><span class="spec-v">75 mm</span></div>
+            </div>
+            <button class="prod-cta" onclick="window.location='contacto.html'" data-i18n="btn-cotizar">Cotizar</button>
+          </div>
+        </div>
+        <div class="prod-card">
+          <img class="prod-card-img" src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=400&q=70" alt="Soosan SB-50" loading="lazy" />
+          <div class="prod-card-body">
+            <div class="prod-card-name">Soosan SB-50</div>
+            <div class="prod-specs">
+              <div class="prod-spec-row"><span class="spec-k">Peso</span><span class="spec-v">915 kg</span></div>
+              <div class="prod-spec-row"><span class="spec-k">Portador</span><span class="spec-v">11 – 16 ton</span></div>
+              <div class="prod-spec-row"><span class="spec-k">Impacto</span><span class="spec-v">350 – 700 bpm</span></div>
+              <div class="prod-spec-row"><span class="spec-k">Cincel</span><span class="spec-v">100 mm</span></div>
+            </div>
+            <button class="prod-cta" onclick="window.location='contacto.html'" data-i18n="btn-cotizar">Cotizar</button>
+          </div>
+        </div>
+        <div class="prod-card">
+          <img class="prod-card-img" src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=400&q=70" alt="Soosan SB-70" loading="lazy" />
+          <div class="prod-card-body">
+            <div class="prod-card-name">Soosan SB-70</div>
+            <div class="prod-specs">
+              <div class="prod-spec-row"><span class="spec-k">Peso</span><span class="spec-v">1,500 kg</span></div>
+              <div class="prod-spec-row"><span class="spec-k">Portador</span><span class="spec-v">16 – 21 ton</span></div>
+              <div class="prod-spec-row"><span class="spec-k">Impacto</span><span class="spec-v">350 – 600 bpm</span></div>
+              <div class="prod-spec-row"><span class="spec-k">Cincel</span><span class="spec-v">135 mm</span></div>
+            </div>
+            <button class="prod-cta" onclick="window.location='contacto.html'" data-i18n="btn-cotizar">Cotizar</button>
+          </div>
+        </div>
+        <div class="prod-card">
+          <img class="prod-card-img" src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=400&q=70" alt="Soosan SB-81" loading="lazy" />
+          <div class="prod-card-body">
+            <div class="prod-card-name">Soosan SB-81</div>
+            <div class="prod-specs">
+              <div class="prod-spec-row"><span class="spec-k">Peso</span><span class="spec-v">1,766 kg</span></div>
+              <div class="prod-spec-row"><span class="spec-k">Portador</span><span class="spec-v">18 – 26 ton</span></div>
+              <div class="prod-spec-row"><span class="spec-k">Impacto</span><span class="spec-v">350 – 500 bpm</span></div>
+              <div class="prod-spec-row"><span class="spec-k">Cincel</span><span class="spec-v">140 mm</span></div>
+            </div>
+            <button class="prod-cta" onclick="window.location='contacto.html'" data-i18n="btn-cotizar">Cotizar</button>
+          </div>
+        </div>
+        <div class="prod-card">
+          <img class="prod-card-img" src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=400&q=70" alt="Soosan SB-100" loading="lazy" />
+          <div class="prod-card-body">
+            <div class="prod-card-name">Soosan SB-100</div>
+            <div class="prod-specs">
+              <div class="prod-spec-row"><span class="spec-k">Peso</span><span class="spec-v">2,071 kg</span></div>
+              <div class="prod-spec-row"><span class="spec-k">Portador</span><span class="spec-v">25 – 30 ton</span></div>
+              <div class="prod-spec-row"><span class="spec-k">Impacto</span><span class="spec-v">300 – 450 bpm</span></div>
+              <div class="prod-spec-row"><span class="spec-k">Cincel</span><span class="spec-v">150 mm</span></div>
+            </div>
+            <button class="prod-cta" onclick="window.location='contacto.html'" data-i18n="btn-cotizar">Cotizar</button>
+          </div>
+        </div>
+        <div class="prod-card">
+          <img class="prod-card-img" src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=400&q=70" alt="Soosan SB-121" loading="lazy" />
+          <div class="prod-card-body">
+            <div class="prod-card-name">Soosan SB-121</div>
+            <div class="prod-specs">
+              <div class="prod-spec-row"><span class="spec-k">Peso</span><span class="spec-v">2,362 kg</span></div>
+              <div class="prod-spec-row"><span class="spec-k">Portador</span><span class="spec-v">28 – 35 ton</span></div>
+              <div class="prod-spec-row"><span class="spec-k">Impacto</span><span class="spec-v">300 – 450 bpm</span></div>
+              <div class="prod-spec-row"><span class="spec-k">Cincel</span><span class="spec-v">155 mm</span></div>
+            </div>
+            <button class="prod-cta" onclick="window.location='contacto.html'" data-i18n="btn-cotizar">Cotizar</button>
+          </div>
+        </div>
+        <div class="prod-card">
+          <img class="prod-card-img" src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=400&q=70" alt="Soosan SB-131" loading="lazy" />
+          <div class="prod-card-body">
+            <div class="prod-card-name">Soosan SB-131</div>
+            <div class="prod-specs">
+              <div class="prod-spec-row"><span class="spec-k">Peso</span><span class="spec-v">2,071 kg</span></div>
+              <div class="prod-spec-row"><span class="spec-k">Portador</span><span class="spec-v">25 – 30 ton</span></div>
+              <div class="prod-spec-row"><span class="spec-k">Impacto</span><span class="spec-v">300 – 450 bpm</span></div>
+              <div class="prod-spec-row"><span class="spec-k">Cincel</span><span class="spec-v">150 mm</span></div>
+            </div>
+            <button class="prod-cta" onclick="window.location='contacto.html'" data-i18n="btn-cotizar">Cotizar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══ GENERADORES ══ -->
+    <div class="tab-panel" id="panel-generadores">
+      <div class="cat-header">
+        <div class="cat-header-img">
+          <img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=800&q=70" alt="Generadores Atlas Copco" loading="lazy" />
+        </div>
+        <div class="cat-header-text">
+          <p class="eyebrow" data-i18n="gen-eyebrow">ATLAS COPCO</p>
+          <h2 class="cat-title" data-i18n="gen-title">Generadores<br><span class="yl">Eléctricos</span></h2>
+          <div class="title-bar"></div>
+          <p class="cat-desc" data-i18n="gen-desc">Los generadores Atlas Copco ofrecen potencia segura, eficiencia de combustible y un desempeño probado a nivel mundial. Diseñados para los entornos más exigentes, combinan motores Kubota y alternadores Leroy Somer para un respaldo energético confiable.</p>
+        </div>
+      </div>
+
+      <div class="products-grid gen-grid">
+        <div class="prod-card">
+          <img class="prod-card-img" src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=400&q=70" alt="QAS 20" loading="lazy" />
+          <div class="prod-card-body">
+            <div class="prod-card-name">QAS 20</div>
+            <div class="prod-specs">
+              <div class="prod-spec-row"><span class="spec-k">Tensión nominal</span><span class="spec-v">400 / 480 V</span></div>
+              <div class="prod-spec-row"><span class="spec-k">Potencia</span><span class="spec-v">22 | 27 kVA</span></div>
+              <div class="prod-spec-row"><span class="spec-k">Motor</span><span class="spec-v">Kubota V2403M-BG</span></div>
+              <div class="prod-spec-row"><span class="spec-k">Tanque</span><span class="spec-v">115 L</span></div>
+            </div>
+            <button class="prod-cta" onclick="window.location='contacto.html'" data-i18n="btn-cotizar">Cotizar</button>
+          </div>
+        </div>
+        <div class="prod-card">
+          <img class="prod-card-img" src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=400&q=70" alt="QAS 30" loading="lazy" />
+          <div class="prod-card-body">
+            <div class="prod-card-name">QAS 30</div>
+            <div class="prod-specs">
+              <div class="prod-spec-row"><span class="spec-k">Tensión nominal</span><span class="spec-v">400 / 480 V</span></div>
+              <div class="prod-spec-row"><span class="spec-k">Potencia</span><span class="spec-v">35 | 42.4 kVA</span></div>
+              <div class="prod-spec-row"><span class="spec-k">Motor</span><span class="spec-v">Kubota V3300D</span></div>
+              <div class="prod-spec-row"><span class="spec-k">Tanque</span><span class="spec-v">92 / 292 L</span></div>
+            </div>
+            <button class="prod-cta" onclick="window.location='contacto.html'" data-i18n="btn-cotizar">Cotizar</button>
+          </div>
+        </div>
+        <div class="prod-card">
+          <img class="prod-card-img" src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=400&q=70" alt="QAS 40" loading="lazy" />
+          <div class="prod-card-body">
+            <div class="prod-card-name">QAS 40</div>
+            <div class="prod-specs">
+              <div class="prod-spec-row"><span class="spec-k">Tensión nominal</span><span class="spec-v">400 V</span></div>
+              <div class="prod-spec-row"><span class="spec-k">Potencia</span><span class="spec-v">22 | 27 kVA</span></div>
+              <div class="prod-spec-row"><span class="spec-k">Motor</span><span class="spec-v">Kubota V3300DI</span></div>
+              <div class="prod-spec-row"><span class="spec-k">Tanque</span><span class="spec-v">92 / 292 L</span></div>
+            </div>
+            <button class="prod-cta" onclick="window.location='contacto.html'" data-i18n="btn-cotizar">Cotizar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══ FILTROS ══ -->
+    <div class="tab-panel" id="panel-filtros">
+      <div class="cat-header">
+        <div class="cat-header-img">
+          <img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=800&q=70"
+               alt="Filtros y repuestos" loading="lazy" />
+        </div>
+        <div class="cat-header-text">
+          <p class="eyebrow" data-i18n="flt2-eyebrow">Repuestos originales</p>
+          <h2 class="cat-title" data-i18n="flt2-title">Filtros &amp;<br><span class="yl">Repuestos</span></h2>
+          <div class="title-bar"></div>
+          <p class="cat-desc" data-i18n="flt2-desc">Ofrecemos filtros originales y de la más alta calidad para maquinaria de construcción, minería e industria. Portafolio de marcas líderes como Develon, Bobcat, Sany, CAT, Perkins y Atlas Copco, garantizando el máximo rendimiento y protección de tus equipos.</p>
+        </div>
+      </div>
+
+      <!-- Brand logos -->
+      <div class="filters-brands" style="margin-bottom:48px">
+        <div class="brand-card"><span class="bn">Bobcat</span></div>
+        <div class="brand-card"><span class="bn">SANY</span></div>
+        <div class="brand-card"><span class="bn">DEVELON</span></div>
+        <div class="brand-card"><span class="bn">Perkins</span></div>
+        <div class="brand-card"><span class="bn">Atlas Copco</span></div>
+        <div class="brand-card"><span class="bn">CAT</span></div>
+      </div>
+
+      <!-- Filter categories -->
+      <div class="products-grid" style="padding-bottom:64px">
+        <div class="prod-card">
+          <img class="prod-card-img" src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=400&q=70" alt="Filtros de aceite" loading="lazy" />
+          <div class="prod-card-body">
+            <div class="prod-card-name">Filtros de Aceite</div>
+            <div class="prod-specs">
+              <div class="prod-spec-row"><span class="spec-k">Marcas</span><span class="spec-v">CAT, Perkins, Bobcat</span></div>
+              <div class="prod-spec-row"><span class="spec-k">Tipo</span><span class="spec-v">Originales &amp; OEM</span></div>
+            </div>
+            <button class="prod-cta" onclick="window.location='contacto.html'" data-i18n="btn-consultar">Consultar</button>
+          </div>
+        </div>
+        <div class="prod-card">
+          <img class="prod-card-img" src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=400&q=70" alt="Filtros de combustible" loading="lazy" />
+          <div class="prod-card-body">
+            <div class="prod-card-name">Filtros de Combustible</div>
+            <div class="prod-specs">
+              <div class="prod-spec-row"><span class="spec-k">Marcas</span><span class="spec-v">SANY, Develon, CAT</span></div>
+              <div class="prod-spec-row"><span class="spec-k">Tipo</span><span class="spec-v">Originales &amp; OEM</span></div>
+            </div>
+            <button class="prod-cta" onclick="window.location='contacto.html'" data-i18n="btn-consultar">Consultar</button>
+          </div>
+        </div>
+        <div class="prod-card">
+          <img class="prod-card-img" src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=400&q=70" alt="Filtros hidráulicos" loading="lazy" />
+          <div class="prod-card-body">
+            <div class="prod-card-name">Filtros Hidráulicos</div>
+            <div class="prod-specs">
+              <div class="prod-spec-row"><span class="spec-k">Marcas</span><span class="spec-v">Atlas Copco, SANY</span></div>
+              <div class="prod-spec-row"><span class="spec-k">Tipo</span><span class="spec-v">Originales &amp; OEM</span></div>
+            </div>
+            <button class="prod-cta" onclick="window.location='contacto.html'" data-i18n="btn-consultar">Consultar</button>
+          </div>
+        </div>
+        <div class="prod-card">
+          <img class="prod-card-img" src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=400&q=70" alt="Filtros de aire" loading="lazy" />
+          <div class="prod-card-body">
+            <div class="prod-card-name">Filtros de Aire</div>
+            <div class="prod-specs">
+              <div class="prod-spec-row"><span class="spec-k">Marcas</span><span class="spec-v">Perkins, Bobcat, CAT</span></div>
+              <div class="prod-spec-row"><span class="spec-k">Tipo</span><span class="spec-v">Originales &amp; OEM</span></div>
+            </div>
+            <button class="prod-cta" onclick="window.location='contacto.html'" data-i18n="btn-consultar">Consultar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo-mark"><span class="p1">SÓLU</span><span class="p2">MAQ</span></div>
+        <p class="footer-desc" data-i18n="ft-desc">Soluciones en maquinaria diseñadas para acompañar tus proyectos, garantizando productividad, confianza y respaldo en cada etapa.</p>
+        <div class="footer-social">
+          <a href="#" class="social-btn" aria-label="Facebook">f</a>
+          <a href="#" class="social-btn" aria-label="Instagram">in</a>
+          <a href="#" class="social-btn" aria-label="WhatsApp">wp</a>
+          <a href="#" class="social-btn" aria-label="LinkedIn">li</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="ft-links-title">Enlaces Rápidos</h4>
+        <ul class="footer-links">
+          <li><a href="index.html"     data-i18n="ft-l1">Inicio</a></li>
+          <li><a href="nosotros.html"  data-i18n="ft-l2">Nosotros</a></li>
+          <li><a href="servicios.html" data-i18n="ft-l3">Servicios</a></li>
+          <li><a href="productos.html" data-i18n="ft-l4">Productos</a></li>
+          <li><a href="contacto.html"  data-i18n="ft-l5">Contacto</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="ft-contact-title">Contacto</h4>
+        <div class="footer-contact-item"><span class="fi">📍</span><div><strong data-i18n="ft-addr">Av. Independencia, Km. 10, Local 109</strong><span data-i18n="ft-city">Santo Domingo, República Dominicana</span></div></div>
+        <div class="footer-contact-item"><span class="fi">📞</span><a href="tel:+18097063525" style="color:inherit">(809) 706-3525</a></div>
+        <div class="footer-contact-item"><span class="fi">✉️</span><a href="mailto:info@solumaqrd.com" style="color:inherit">info@solumaqrd.com</a></div>
+        <div class="footer-contact-item"><span class="fi">🕐</span><div><span data-i18n="ft-hrs1">Lun – Vie: 8:00 a.m. – 6:00 p.m.</span><br><span data-i18n="ft-hrs2">Sáb: 8:00 a.m. – 2:00 p.m.</span></div></div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="yr"></span> <span data-i18n="ft-tagline">SOLUMAQ — Soluciones que impulsan tu productividad</span></span>
+      <span data-i18n="ft-rights">Todos los derechos reservados</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/translations.js"></script>
+<script src="js/darkmode.js"></script>
+<script src="js/language.js"></script>
+<script src="js/nav.js"></script>
+<script src="js/forms.js"></script>
+<script src="js/tabs.js"></script>
+</body>
 </html>

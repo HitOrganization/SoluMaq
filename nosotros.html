@@ -1,106 +1,211 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Nosotros - Sólumaq</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="css/nosotros.css"> 
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nosotros — SOLUMAQ</title>
+  <meta name="description" content="Conoce quiénes somos en SOLUMAQ. Nuestra misión, visión y valores como aliado estratégico en maquinaria de construcción en República Dominicana." />
+  <link rel="stylesheet" href="css/style.css" />
 </head>
-<body>
-<main>
+<body data-page="nosotros">
 
-  <div id="header"></div>
+<!-- TOP BAR -->
+<div class="top-bar">
+  <div class="container">
+    <div class="topbar-phone">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:14px;height:14px;stroke:var(--yellow)"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8 19.79 19.79 0 01.5 1.18 2 2 0 012.48 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.18 6.18l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+      <span>(809) 706-3525</span>
+    </div>
+    <div class="topbar-controls">
+      <div class="toggle-group">
+        <span data-i18n="tb-dark-label">Modo oscuro</span>
+        <label class="switch"><input type="checkbox" id="darkToggle" /><span class="slider"></span></label>
+      </div>
+      <div class="toggle-group">
+        <span data-i18n="tb-lang1">ES</span>
+        <label class="switch"><input type="checkbox" id="langToggle" /><span class="slider"></span></label>
+        <span data-i18n="tb-lang2">EN</span>
+      </div>
+    </div>
+  </div>
+</div>
 
-  <!-- Sección principal -->
-  <section class="about-section">
-    <h2>¿Quiénes Somos?</h2>
+<!-- HEADER -->
+<header class="site-header">
+  <div class="container">
+    <a href="index.html" class="logo" aria-label="SOLUMAQ – Inicio">
+      <div class="logo-mark"><span class="p1">SÓLU</span><span class="p2">MAQ</span></div>
+      <div class="logo-sub" data-i18n="hdr-slogan">Soluciones en Maquinaria</div>
+    </a>
+    <nav class="main-nav">
+      <a href="index.html"     class="nav-link" data-i18n="nav-inicio">Inicio</a>
+      <a href="nosotros.html"  class="nav-link active" data-i18n="nav-nosotros">Nosotros</a>
+      <a href="servicios.html" class="nav-link" data-i18n="nav-servicios">Servicios</a>
+      <a href="productos.html" class="nav-link" data-i18n="nav-productos">Productos</a>
+      <a href="contacto.html"  class="nav-cta nav-link" data-i18n="nav-contacto">Contacto</a>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Menú" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <nav class="mobile-nav" id="mobileNav">
+    <a href="index.html"     class="nav-link" data-i18n="nav-inicio">Inicio</a>
+    <a href="nosotros.html"  class="nav-link" data-i18n="nav-nosotros">Nosotros</a>
+    <a href="servicios.html" class="nav-link" data-i18n="nav-servicios">Servicios</a>
+    <a href="productos.html" class="nav-link" data-i18n="nav-productos">Productos</a>
+    <a href="contacto.html"  class="nav-cta"  data-i18n="nav-contacto">Contacto</a>
+  </nav>
+</header>
 
-    <p>
-      SOLUMAQ surge con la visión de reunir en un solo lugar soluciones en
-      maquinaria, repuestos y herramientas de las marcas más reconocidas del
-      mundo. Hoy somos un aliado estratégico en construcción, minería e industria,
-      ofreciendo la línea más amplia de martillos hidráulicos junto con respaldo,
-      garantía y confianza que aseguran la continuidad de tus proyectos.
-    </p>
 
-    <p>
-      Trabajamos para que cada cliente encuentre en nosotros un socio confiable,
-      capaz de ofrecer disponibilidad inmediata, soporte especializado y soluciones
-      que impulsan la productividad en cada obra. Porque en SOLUMAQ, la calidad
-      no es opcional, es parte integral de nuestro servicio.
-    </p>
-  </section>
+<!-- HERO -->
+<section class="page-hero">
+  <div class="container page-hero-inner">
+    <p class="page-hero-eyebrow" data-i18n="nos-eyebrow">Conoce SOLUMAQ</p>
+    <h1 class="page-hero-title" data-i18n="nos-hero-title">
+      ¿QUIÉNES<br><span class="wh">SOMOS?</span>
+    </h1>
+  </div>
+</section>
 
-  <section class="mission-vision-section">
-    <div class="mission">
-      <h3>Misión</h3>
-      <p>
-        Ofrecer herramientas, repuestos e implementos para
-        maquinarias pesadas que garanticen confianza, disponibilidad
-        y precios justos, apoyando a empresas que dependen de
-        equipos industriales, agrícolas, de construcción y minería, con
-        un catálogo variado y marcas reconocidas a nivel internacional.
-      </p>
+
+<!-- QUIÉNES SOMOS -->
+<section class="who-section section-pad">
+  <div class="container">
+    <div class="who-layout">
+      <div class="who-img">
+        <img src="photos/header.jpg" alt="Equipo SOLUMAQ" loading="lazy" />
+      </div>
+      <div>
+        <p class="eyebrow" data-i18n="nos-who-eyebrow">Nuestra historia</p>
+        <h2 class="section-title" data-i18n="nos-who-title">Un aliado estratégico <span class="yl">de confianza</span></h2>
+        <div class="title-bar"></div>
+        <div class="who-body">
+          <p data-i18n="nos-p1">SOLUMAQ surge con la visión de reunir en un solo lugar soluciones en maquinaria, repuestos y herramientas de las marcas más reconocidas del mundo. Hoy somos un aliado estratégico en <strong>construcción, minería e industria</strong>, ofreciendo la línea más amplia de martillos hidráulicos junto con respaldo, garantía y confianza que aseguran la continuidad de tus proyectos.</p>
+          <p data-i18n="nos-p2">Trabajamos para que cada cliente encuentre en nosotros un socio confiable, capaz de ofrecer <strong>disponibilidad inmediata, soporte especializado</strong> y soluciones que impulsan la productividad en cada obra. Porque en SOLUMAQ, la calidad no es opcional, es parte integral de nuestro servicio.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- STATS -->
+<div class="stats-band">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item">
+        <div class="stat-num">10+</div>
+        <div class="stat-label" data-i18n="stat-1">Años de experiencia</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">6</div>
+        <div class="stat-label" data-i18n="stat-2">Marcas representadas</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">500+</div>
+        <div class="stat-label" data-i18n="stat-3">Clientes atendidos</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">24h</div>
+        <div class="stat-label" data-i18n="stat-4">Soporte técnico</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- MISIÓN · VISIÓN · VALORES -->
+<section class="mvv-section section-pad">
+  <div class="container">
+    <p class="eyebrow" style="text-align:center" data-i18n="mvv-eyebrow">Lo que nos define</p>
+    <h2 class="section-title" style="text-align:center" data-i18n="mvv-title">Misión, Visión <span class="yl">&amp; Valores</span></h2>
+    <div class="title-bar" style="margin:14px auto 40px"></div>
+
+    <div class="mvv-grid">
+
+      <div class="mvv-card" data-bg="M">
+        <h3 data-i18n="mvv-mis-title">Misión</h3>
+        <p data-i18n="mvv-mis-text">Ofrecer herramientas, repuestos e implementos para maquinarias pesadas que garanticen confianza, disponibilidad y precios justos, apoyando a empresas que dependen de equipos industriales, agrícolas, de construcción y minería, con un catálogo variado y marcas reconocidas a nivel internacional.</p>
+      </div>
+
+      <div class="mvv-card" data-bg="V">
+        <h3 data-i18n="mvv-vis-title">Visión</h3>
+        <p data-i18n="mvv-vis-text">Expandirnos como un referente en soluciones para maquinaria pesada en la región, ampliando nuestra presencia en sectores como el agrícola, la construcción y la minería, consolidándonos como la opción más confiable por nuestra variedad, eficiencia y compromiso con el cliente.</p>
+      </div>
+
+      <div class="mvv-card valores" data-bg="V">
+        <h3 data-i18n="mvv-val-title">Valores</h3>
+        <p data-i18n="mvv-val-text">En <strong>SOLUMAQ</strong> trabajamos guiados por valores que definen nuestra forma de servir. La confianza nos impulsa a ser un proveedor transparente, responsable y accesible. Nuestro compromiso se refleja en el acompañamiento constante de cada operación, con seriedad y visión a largo plazo. Y bajo la responsabilidad, asumimos cada pedido, consulta o acuerdo con la firme intención de brindar respuestas claras, cumplir los plazos y ofrecer soluciones reales cuando más se necesitan.</p>
+      </div>
+
     </div>
 
-    <div class="vision">
-      <h3>Visión</h3>
-      <p>
-        Expandirnos como un referente en soluciones para maquinaria
-        pesada en la región, ampliando nuestra presencia en sectores
-        como el agrícola, la construcción y la minería, y
-        consolidándonos como la opción más confiable por nuestra
-        variedad, eficiencia y compromiso con el cliente.
-      </p>
+    <!-- Value icons -->
+    <div class="values-icons">
+      <div class="value-icon-card">
+        <div class="value-icon">🤝</div>
+        <div class="value-name" data-i18n="val-1-name">Confianza</div>
+        <div class="value-desc" data-i18n="val-1-desc">Transparencia y accesibilidad en cada relación con nuestros clientes y socios.</div>
+      </div>
+      <div class="value-icon-card">
+        <div class="value-icon">🎯</div>
+        <div class="value-name" data-i18n="val-2-name">Compromiso</div>
+        <div class="value-desc" data-i18n="val-2-desc">Acompañamiento constante en cada operación con seriedad y visión de largo plazo.</div>
+      </div>
+      <div class="value-icon-card">
+        <div class="value-icon">⚙️</div>
+        <div class="value-name" data-i18n="val-3-name">Responsabilidad</div>
+        <div class="value-desc" data-i18n="val-3-desc">Respuestas claras, plazos cumplidos y soluciones reales cuando más se necesitan.</div>
+      </div>
     </div>
 
-    <div class="valores">
-      <h3>Valores</h3>
-      <p>
-        En <span>SOLUMAQ</span> trabajamos guiados por valores que definen nuestra forma de servir. La confianza nos impulsa a ser un proveedor
-        transparente, responsable y accesible. Nuestro compromiso se refleja en el acompañamiento constante de cada operación, con seriedad y
-        visión a largo plazo. Y bajo la responsabilidad, asumimos cada pedido, consulta o acuerdo con la firme intención de brindar respuestas
-        claras, cumplir los plazos y ofrecer soluciones reales cuando más se necesitan.
-      </p>
+  </div>
+</section>
+
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo-mark"><span class="p1">SÓLU</span><span class="p2">MAQ</span></div>
+        <p class="footer-desc" data-i18n="ft-desc">Soluciones en maquinaria diseñadas para acompañar tus proyectos, garantizando productividad, confianza y respaldo en cada etapa.</p>
+        <div class="footer-social">
+          <a href="#" class="social-btn" aria-label="Facebook">f</a>
+          <a href="#" class="social-btn" aria-label="Instagram">in</a>
+          <a href="#" class="social-btn" aria-label="WhatsApp">wp</a>
+          <a href="#" class="social-btn" aria-label="LinkedIn">li</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="ft-links-title">Enlaces Rápidos</h4>
+        <ul class="footer-links">
+          <li><a href="index.html"     data-i18n="ft-l1">Inicio</a></li>
+          <li><a href="nosotros.html"  data-i18n="ft-l2">Nosotros</a></li>
+          <li><a href="servicios.html" data-i18n="ft-l3">Servicios</a></li>
+          <li><a href="productos.html" data-i18n="ft-l4">Productos</a></li>
+          <li><a href="contacto.html"  data-i18n="ft-l5">Contacto</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="ft-contact-title">Contacto</h4>
+        <div class="footer-contact-item"><span class="fi">📍</span><div><strong data-i18n="ft-addr">Av. Independencia, Km. 10, Local 109</strong><span data-i18n="ft-city">Santo Domingo, República Dominicana</span></div></div>
+        <div class="footer-contact-item"><span class="fi">📞</span><a href="tel:+18097063525" style="color:inherit">(809) 706-3525</a></div>
+        <div class="footer-contact-item"><span class="fi">✉️</span><a href="mailto:info@solumaqrd.com" style="color:inherit">info@solumaqrd.com</a></div>
+        <div class="footer-contact-item"><span class="fi">🕐</span><div><span data-i18n="ft-hrs1">Lun – Vie: 8:00 a.m. – 6:00 p.m.</span><br><span data-i18n="ft-hrs2">Sáb: 8:00 a.m. – 2:00 p.m.</span></div></div>
+      </div>
     </div>
-  </section>
+    <div class="footer-bottom">
+      <span>© <span id="yr"></span> <span data-i18n="ft-tagline">SOLUMAQ — Soluciones que impulsan tu productividad</span></span>
+      <span data-i18n="ft-rights">Todos los derechos reservados</span>
+    </div>
+  </div>
+</footer>
 
-
-    <div id="footer"></div>
- 
-  </main>
-
-  <!-- CARGA DE HEADER Y FOOTER -->
-  <script>
-  async function loadComponent(id, file) {
-    const container = document.getElementById(id);
-    const response = await fetch(file);
-    const html = await response.text();
-
-  const temp = document.createElement("div");
-  temp.innerHTML = html;
- 
-  container.innerHTML = html;
-
-  temp.querySelectorAll("script").forEach(oldScript => {
-    const newScript = document.createElement("script");
-
-    if (oldScript.src) {
-      newScript.src = oldScript.src;
-    } else {
-      newScript.textContent = oldScript.textContent;
-    }
-
-    document.body.appendChild(newScript);
-  });
-}
-
-loadComponent("header", "header.html");
-loadComponent("footer", "footer.html");
-</script>
-
+<script src="js/translations.js"></script>
+<script src="js/darkmode.js"></script>
+<script src="js/language.js"></script>
+<script src="js/nav.js"></script>
 </body>
 </html>
