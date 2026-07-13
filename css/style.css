@@ -569,6 +569,14 @@ input:checked + .slider::before    { transform: translateX(22px); }
 }
 .dark .brand-card { background: var(--dk-card); border-color: var(--dk-border); }
 .brand-card:hover { border-color: var(--yellow); box-shadow: 0 0 0 3px rgba(247,181,0,.15); }
+.brand-card .brand-logo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  max-width: 140px;
+  max-height: 48px;
+  display: block;
+}
 .brand-card .bn {
   font-family: var(--ff-display);
   font-size: 20px;
@@ -817,10 +825,24 @@ input:checked + .slider::before    { transform: translateX(22px); }
   border-radius: 50%;
   border: 1px solid rgba(255,255,255,.15);
   display: flex; align-items: center; justify-content: center;
-  font-size: 13px;
   transition: all var(--ease);
   color: rgba(255,255,255,.5);
   text-align: center;
+}
+.social-btn svg,
+.soc-btn svg {
+  width: 16px;
+  height: 16px;
+  display: block;
+  fill: currentColor;
+  stroke: currentColor;
+}
+.social-btn img,
+.soc-btn img {
+  width: 16px;
+  height: 16px;
+  display: block;
+  object-fit: contain;
 }
 .social-btn:hover { background: var(--yellow); border-color: var(--yellow); color: #000; }
 
@@ -1133,7 +1155,7 @@ input:checked + .slider::before    { transform: translateX(22px); }
 .social-strip { display: flex; gap: 12px; padding: 20px 24px; border-radius: var(--r); border: 1px solid var(--g200); background: var(--g50); align-items: center; transition: all var(--ease); }
 .dark .social-strip { background: var(--dk-card); border-color: var(--dk-border); }
 .social-strip-label { font-size: 12px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--g400); margin-right: 4px; }
-.soc-btn { width: 40px; height: 40px; border-radius: 50%; background: var(--g200); display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700; color: var(--g600); transition: all var(--ease); }
+.soc-btn { width: 40px; height: 40px; border-radius: 50%; background: var(--g200); display: flex; align-items: center; justify-content: center; color: var(--g600); transition: all var(--ease); }
 .dark .soc-btn { background: var(--dk-border); color: var(--g400); }
 .soc-btn:hover { background: var(--yellow); color: #000; transform: translateY(-2px); }
 
